@@ -1,27 +1,111 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Bangers';
+    src: url(../fonts/Bangers/Bangers-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url(../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: 'Now-font';
+    src: url(../fonts/Now_Font/Now-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Allura';
+    src: url(../fonts/Allura/Allura-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Yellowtail';
+    src: url(../fonts/Yellowtail/Yellowtail-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Satisfy';
+    src: url(../fonts/Satisfy/Satisfy-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Licorice';
+    src: url(../fonts/Licorice/Licorice-Regular.ttf);
+}
+
+
+/*paleta de colores*/
+:root{
+    --color-one: #7400b8;
+    --color-two: #6930c3;
+    --color-three: #5e60ce;
+    --color-four: #5390d9;
+    --color-five: #4ea8de;
+    --color-six: #48bfe3;
+    --color-seven: #56cfe1;
+    --color-eight: #64dfdf;
+    --color-nine: #72efdd;
+    --color-ten: #80ffdb;
+}
+/*inicio de codigo */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
+
 header{
-    background: lightblue;
+    background: #313131;
     width: 100%;
     height: 100vh;
     color: #fff;
-    text-transform: uppercase;
     font-size: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
+.name-page{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+
+   font-family: 'Now-font';
+   font-size: 9rem;
+   font-weight: 900;
+   /* writing-mode: vertical-rl;
+   transform: rotate(180deg); */
+
+
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #aaa5a5;
+}
+
+/*Nombre del proyecto*/
+
+/*fin del nombre*/
+
+
+/* globales de elementos iguales*/
 main{
     width: 100%;
     height: 100%;
     color: #fff;
     text-transform: uppercase;
     font-size: 3rem;
+    overflow: hidden;
 }
 
 section{
@@ -30,24 +114,71 @@ section{
     justify-content: center;
 }
 
+main .section-name{
+    font-family: 'Now-font';
+    /* letter-spacing: -10px; */
+    font-weight: 800;
+    font-size: 7rem;
+    color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #aaa5a5;
+}
+
+/*section service*/
 main .service{
-    background: limegreen;
+    position: relative;
+    background: linear-gradient(90deg, #080808, rgb(226, 26, 26));
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
+
+main .service .container-name h2{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+.service .container-name{
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+/*section player*/
 
 main .player{
-    background: lightsalmon;
+    background: linear-gradient(90deg, rgb(7, 10, 201), #080808);
     width: 100%;
     height: 100vh;
+    position: relative;
 }
+
+main .player .container-name h2{
+    writing-mode: vertical-lr;
+}
+
+.player .container-name{
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+/*section about*/
 
 main .about-us{
-    background: rgb(93, 158, 243);
+    background: linear-gradient(90deg, #080808, rgb(158, 6, 31));
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
+.about-us .container-name{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+/*footer*/
 footer{
     width: 100%;
     height: 200px;

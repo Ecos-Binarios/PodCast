@@ -3,25 +3,62 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- TODO: TITULO PAGINA -->
     <title>Ecos-PodCast</title>
     <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="stylesheet" href="./assets/menu.css">
   </head>
   <body>
     <!-- TODO: CABECERA DEL PROYECTO - NAV - HERO - PRESENTACION -->
     <header>
-      <h1>hero</h1>
+      <div class="name-page">
+        <h1>ECOS</h1>
+      </div>
     </header>
+
+
+
+    <!-- TODO: NAVEGACION -->
+    <!-- <img src="./images/icon-menu.svg" alt="icono menu" class="icono"> -->
+    <nav class="container-nav">
+      <img src="./images/icon-menu-cuadrado.svg" alt="menu lateral" class="btn-menu">
+      <!-- <img src="./images/brazo.png" alt="brazo-tocadiscos" class="brazo-tocadiscos"> -->
+      <div class="nav-lateral">
+        <ul class="container-nav-list">
+          <li class="item-nav">Home</li>
+          <li class="item-nav">Service</li>
+          <li class="item-nav">About</li>
+          <li class="item-nav">Player</li>
+        </ul>
+        <div class="container-nav-btn">
+          <button class="btn-menu-user">Sing in</button>
+          <button class="btn-menu-user">Sing up</button>
+        </div>
+      </div>
+    </nav>
+   
 
     <!-- TODO: 3 SECCIONES DEL PROYECTO - SERVICIO - REPRODUCTOR -->
     <main>
-      <section class="service"><h2>service</h2></section>
-      <section class="player"><h2>player</h2></section>
+      <section class="service">
+        <div class="container-name">
+          <h2 class="section-name">Service</h2>
+        </div>
+      </section>
+      <section class="player">
+        <div class="container-name">
+          <h2 class="section-name">Player</h2>
+        </div>
+      </section>
       <!-- TODO: PODRIAMOS REALIZARLO EN OTRA PAGINA -->
-      <section class="about-us"><h2>about us</h2></section>
+      <section class="about-us">
+        <div class="container-name">
+          <h2 class="section-name">About</h2>
+        </div>
+      </section>
     </main>
-
 
     <!-- TODO: REDES SOCIALES DEL PROYECTO - ENFATIZAR EL REGISTRO O EL LOGUEO -->
     <footer>
