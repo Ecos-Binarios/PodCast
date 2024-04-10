@@ -1,71 +1,98 @@
 <!DOCTYPE html>
 <!-- TODO: CAMBIO DE IDIOMA -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="es">
 
-    <!-- TODO: TITULO PAGINA -->
-    <title>Ecos-PodCast</title>
-    <link rel="stylesheet" href="./assets/main.css" />
-    <link rel="stylesheet" href="./assets/menu.css">
-  </head>
-  <body>
-    <!-- TODO: CABECERA DEL PROYECTO - NAV - HERO - PRESENTACION -->
-    <header>
-      <div class="name-page">
-        <h1>ECOS</h1>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="./images/logo-only.png" type="image/x-icon">
 
+  <!-- TODO: TITULO PAGINA -->
+  <title>Ecos-PodCast</title>
+  <link rel="stylesheet" href="./assets/main.css" />
+  <!-- <link rel="stylesheet" href="./assets/menu.css"> -->
+</head>
 
+<body>
 
-    <!-- TODO: NAVEGACION -->
-    <!-- <img src="./images/icon-menu.svg" alt="icono menu" class="icono"> -->
-    <nav class="container-nav">
-      <img src="./images/icon-menu-cuadrado.svg" alt="menu lateral" class="btn-menu">
-      <!-- <img src="./images/brazo.png" alt="brazo-tocadiscos" class="brazo-tocadiscos"> -->
-      <div class="nav-lateral">
-        <ul class="container-nav-list">
-          <li class="item-nav">Home</li>
-          <li class="item-nav">Service</li>
-          <li class="item-nav">About</li>
-          <li class="item-nav">Player</li>
+  <!-- CABECERA DEL PROYECTO - NAV - HERO - PRESENTACION -->
+  <header class="hero">
+
+    <nav class="nav container">
+
+      <figure class="nav__logo">
+        <img src="./images/logo-ecos-white.png" alt="Ecos-PodCast" class="nav__img">
+      </figure>
+
+      <section class="nav__menu">
+        <ul class="nav__links">
+          <li class="nav__list"><a href="#" class="nav__link">Inicio</a></li>
+          <li class="nav__list"><a href="#" class="nav__link">Servicios</a></li>
+          <li class="nav__list"><a href="#" class="nav__link">¿Quiénes somos?</a></li>
+          <li class="nav__list"><a href="#" class="nav__link">Contacto</a></li>
         </ul>
-        <div class="container-nav-btn">
-          <button class="btn-menu-user">Sing in</button>
-          <button class="btn-menu-user">Sing up</button>
+        <div class="nav__buttons">
+          <a href="#" class="btn btn-transparent">Iniciar Sesión</a>
         </div>
-      </div>
+      </section>
+
+      <label for="menu" class="nav__label">
+        <input type="checkbox" id="menu">
+        <span class="menu__icon menu-1"></span>
+        <span class="menu__icon menu-2"></span>
+        <span class="menu__icon menu-3"></span>
+      </label>
+
     </nav>
-   
 
-    <!-- TODO: 3 SECCIONES DEL PROYECTO - SERVICIO - REPRODUCTOR -->
-    <main>
-      <section class="service">
-        <div class="container-name">
-          <h2 class="section-name">Service</h2>
-        </div>
-      </section>
-      <section class="player">
-        <div class="container-name">
-          <h2 class="section-name">Player</h2>
-        </div>
-      </section>
-      <!-- TODO: PODRIAMOS REALIZARLO EN OTRA PAGINA -->
-      <section class="about-us">
-        <div class="container-name">
-          <h2 class="section-name">About</h2>
-        </div>
-      </section>
-    </main>
+    <section class="hero__main container">
 
-    <!-- TODO: REDES SOCIALES DEL PROYECTO - ENFATIZAR EL REGISTRO O EL LOGUEO -->
-    <footer>
-      <h2>footer</h2>
-    </footer>
+      <figure class="hero__figure">
+        <img src="./images/bg-2-sin-fondo.png" alt="Hero" class="hero__img">
+      </figure>
 
-    <!-- TODO: SCRIPTS DE LA PAGINA  -->
-    <script src="./assets/main.js"></script>
-  </body>
+      <article class="hero__content">
+        <h1 class="hero__title">Lorem ipsum dolor sit amet consectetur</h1>
+        <p class="hero__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus rem
+          quos atque voluptate eius iure hic.</p>
+
+        <div class="hero__buttons">
+          <a href="#" class="btn">
+            Crear una cuenta</a>
+        </div>
+      </article>
+
+    </section>
+
+  </header>
+
+  <!-- TODO: 3 SECCIONES DEL PROYECTO - SERVICIO - REPRODUCTOR -->
+  <main class="main container">
+    <section class="service">
+      <div class="container-name">
+        <h2 class="section-name">Service</h2>
+      </div>
+    </section>
+    <section class="player">
+      <div class="container-name">
+        <h2 class="section-name">Player</h2>
+      </div>
+    </section>
+    <!-- TODO: PODRIAMOS REALIZARLO EN OTRA PAGINA -->
+    <section class="about-us">
+      <div class="container-name">
+        <h2 class="section-name">About</h2>
+      </div>
+    </section>
+  </main>
+
+  <!-- TODO: REDES SOCIALES DEL PROYECTO - ENFATIZAR EL REGISTRO O EL LOGUEO -->
+  <footer>
+    <h2>footer</h2>
+  </footer>
+
+  <!-- TODO: SCRIPTS DE LA PAGINA  -->
+  <script src="./assets/main.js"></script>
+</body>
+
 </html>
