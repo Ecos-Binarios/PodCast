@@ -1,8 +1,6 @@
 .container-nav{
     width: 100%;
     position: absolute;
-    top: 10px;
-    left: 0;
     
     
     display: flex;
@@ -10,6 +8,7 @@
     align-items: center;
     padding: 0 30px;
 }
+
 .nav-lateral{
     display: flex;
     align-items: center;
@@ -48,11 +47,30 @@
 
 /* Desktop */
 @media (min-width: 768px) {
+    .container-nav{
+        top: 10px;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
 
 }
 
 /* Mobile */
 @media (max-width: 768px) { 
+    .container-nav{
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+    }
 
      
  }

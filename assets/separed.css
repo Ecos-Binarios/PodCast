@@ -1,0 +1,40 @@
+section.separed{
+    width: 100%;
+    height: 300px;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+section.separed div{
+    position: absolute;
+    width: 110%;
+    height: 60px;
+    background: var(--color-four);
+    color: black;
+    font-size: 4rem;
+}
+
+section.separed div h6{
+    font-family: 'Roboto';
+    font-size: 4rem;
+}
+
+section.separed div small{
+    font-size: 2rem;
+}
+
+section.separed div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: rotate(5deg);
+}
+
+section.separed div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: rotate(-10deg);
+}

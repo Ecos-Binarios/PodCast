@@ -1,0 +1,121 @@
+.service__container {
+  width: 100%;
+  height: 100%;
+  /* background-color: aliceblue; */
+  /*     display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+}
+
+.service__left {
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  /* background: blue; */
+  height: 100%;
+}
+
+.onaire {
+  color: #ffffff;
+  font-family: "Roboto";
+  border: 2px solid var(--color-one);
+  border-radius: 10px;
+  padding: 10px 15px;
+  z-index: 5;
+  text-shadow: -0.1rem -0.1rem 0.5rem #fff, 0.1rem 0.1rem 0.5rem #fff,
+    0 0 0.5rem var(--color-rosa), 0 0 1rem var(--color-rosa),
+    0 0 2rem var(--color-rosa), 0 0 4rem var(--color-rosa),
+    0 0 6rem var(--color-rosa);
+
+  box-shadow: 0 0 0.2rem #fff,
+              inset 0 0 0.2rem #fff,
+              0 0 0.5rem var(--color-six), 
+              inset 0 0 0.5rem var(--color-six),
+              0 0 1rem var(--color-six), 
+              inset 0 0 1rem var(--color-six);
+
+   animation: neon 1.5s infinite alternate;
+}
+
+.service__gradient {
+  position: relative;
+  /* background-color: red; */
+}
+
+.container__item {
+  display: flex;
+  gap: 20px;
+  width: 980px;
+  overflow-x: scroll;
+  /* background: blue; */
+  padding: 0px 300px 0px 300px;
+}
+
+.container__item::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #080808);
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transform: scaleX(-1);
+}
+
+.container__item::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+
+/* .service_right {
+  /* background: red;
+} 
+*/
+
+.service__left__item {
+  min-width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  background: #e3eede;
+}
+
+/* .service_content_right {
+} */
+
+.item__left-activo {
+  margin-left: 200px;
+}
+
+
+/* Animate neon parpadeo */
+@keyframes neon {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow: -0.1rem -0.1rem 0.5rem #fff, 0.1rem 0.1rem 0.5rem #fff,
+        0 0 0.5rem var(--color-rosa), 0 0 1rem var(--color-rosa),
+        0 0 2rem var(--color-rosa), 0 0 4rem var(--color-rosa),
+        0 0 6rem var(--color-rosa);
+    
+      box-shadow: 0 0 0.2rem #fff,
+                  inset 0 0 0.2rem #fff,
+                  0 0 0.5rem var(--color-six), 
+                  inset 0 0 0.5rem var(--color-six),
+                  0 0 1rem var(--color-six), 
+                  inset 0 0 1rem var(--color-six);   
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
