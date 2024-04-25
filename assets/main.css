@@ -38,6 +38,45 @@
     src: url(../fonts/Licorice/Licorice-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Monoton';
+    src: url(../fonts/Monoton/Monoton-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Bombing';
+    src: url(../fonts/bombing/Bombing.ttf);
+}
+
+@font-face {
+    font-family: 'brushed';
+    src: url(../fonts/brushed/Brushed.ttf);
+}
+
+@font-face {
+    font-family: 'urban';
+    src: url(../fonts/urban_heroes/Urban\ Heroes.ttf);
+}
+
+@font-face {
+    font-family: 'docallisme';
+    src: url(../fonts/docallisme_on_street/DOCALLISME\ ON\ STREET.ttf);
+}
+
+@font-face {
+    font-family: 'arvo';
+    src: url(../fonts/Arvo/Arvo-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'playfair';
+    src: url(../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
 
 /*paleta de colores*/
 :root{
@@ -74,7 +113,7 @@ header{
     font-size: 3rem;
 
     display: grid;
-    grid-template-columns: 100px 10px repeat(2, 1fr);
+    grid-template-columns: 80px 10px repeat(2, 1fr);
 
 
     position: relative;
@@ -110,7 +149,7 @@ main{
     width: 100%;
     height: 100%;
     color: #fff;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 3rem;
     overflow: hidden;
 }
@@ -119,6 +158,10 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+section .container-name h2{
+    text-transform: uppercase;
 }
 
 main .section-name{

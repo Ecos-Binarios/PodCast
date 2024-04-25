@@ -20,9 +20,30 @@
     height: 25px;
 }
 
+.container-nav-btn{
+    display: flex;
+    gap: 20px;
+}
 .btn-menu-user{
-    padding: 8px 12px;
+    /* padding: 8px 12px; */
+    /* border-radius: 20px; */
+    border: none;
+    appearance: none;
+    outline: none;
+    background: none;
+    color: #ffffffff;
+    font-size: 1rem;
+    border-bottom: 1px solid #ffffffff;
+}
+
+.btn-menu-user:nth-child(1){
+    font-family: 'Roboto';
+    font-size: 1rem;
+    color: var(--color-nine);
+    padding: 10px 30px;
     border-radius: 20px;
+    background: var(--color-one);
+    border: none;
 }
 
 .container-nav-list{
