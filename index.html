@@ -11,6 +11,7 @@
   <title>Ecos-PodCast</title>
   <link rel="stylesheet" href="./assets/main.css" />
   <!-- <link rel="stylesheet" href="./assets/menu.css"> -->
+  <link rel="stylesheet" href="./assets/service.css">
 </head>
 
 <body>
@@ -33,7 +34,7 @@
           <li class="nav__list"><a href="#" class="nav__link">Contacto</a></li>
         </ul>
         <div class="nav__buttons">
-          <a href="#" class="btn btn-prueba">Iniciar Sesión</a>
+          <a href="#" class="btn btn-shadow">Iniciar Sesión</a>
         </div>
       </section>
 
@@ -54,34 +55,38 @@
       </figure>
 
       <article class="hero__content">
-        <h1 class="hero__title">Lorem ipsum dolor sit amet consectetur</h1>
-        <p class="hero__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus rem
-          quos atque voluptate eius iure hic.</p>
-
+        <h1 class="hero__title">Todos
+          tenemos algo que <span>contar</span> </h1>
+        <p class="hero__paragraph">"Los científicos dicen que estamos hechos de átomos, pero a mí un pajarito me contó
+          que estamos hechos de historias", dijo alguna vez Eduardo Galeano.</p>
         <div class="hero__buttons">
-          <a href="#" class="btn btn-prueba">
+          <a href="#" class="btn btn-shadow">
             Crear una cuenta</a>
         </div>
       </article>
 
-      <a class="hero__scroll">
-        <svg xmlns="http://www.w3.org/2000/svg" class="logo-mouse" width="16" height="16" fill="currentColor" class="bi bi-mouse"
-          viewBox="0 0 16 16">
+      <!-- <a class="hero__scroll">
+        <svg xmlns="http://www.w3.org/2000/svg" class="logo-mouse" width="16" height="16" fill="currentColor"
+          class="bi bi-mouse" viewBox="0 0 16 16">
           <path
             d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3m4 8a4 4 0 0 1-8 0V5a4 4 0 1 1 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5" />
         </svg>
-      </a>
+      </a> -->
 
     </section>
 
   </header>
 
   <!-- TODO: 3 SECCIONES DEL PROYECTO - SERVICIO - REPRODUCTOR -->
-  <main class="main container">
-    <section class="service">
-      <div class="container-name">
-        <h2 class="section-name">Service</h2>
+  <main class="main">
+    <section class="service" id="hex-grid">
+      <div class="container">
+        <div class="container-name">
+          <h2 class="section-name">Servicios</h2>
+        </div>
       </div>
+      <div class="light"></div>
+      <div class="grid"></div>
     </section>
     <section class="player">
       <div class="container-name">
@@ -103,6 +108,15 @@
 
   <!-- TODO: SCRIPTS DE LA PAGINA  -->
   <script src="./assets/main.js"></script>
+  <script>
+    const light = document.querySelector(".light")
+    const grid = document.querySelector("#hex-grid")
+
+    grid.addEventListener('mousemove', function (e) {
+      light.style.left = `${e.clientX}px`
+      light.style.top = `${e.clientY}px`
+    })
+  </script>
 </body>
 
 </html>

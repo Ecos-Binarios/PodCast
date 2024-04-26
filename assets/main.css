@@ -179,12 +179,12 @@ body {
     /* border: 1px solid var(--color-three); */
 }
 
-.btn-prueba {
+.btn-shadow {
     background: radial-gradient(231.94% 231.94% at 50% 100%, var(--color-three) 0, rgba(53, 41, 128, 0) 25.24%), linear-gradient(180deg, rgba(243, 238, 255, 0), rgba(243, 238, 255, .04)), rgba(147, 130, 255, .01);
     box-shadow: 0 0 0 0 rgba(16, 0, 51, .4), 0 2px 5px 0 rgba(16, 0, 51, .39), 0 8px 8px 0 rgba(16, 0, 51, .34), 0 19px 11px 0 rgba(16, 0, 51, .2), 0 34px 14px 0 rgba(16, 0, 51, .06), 0 53px 15px 0 rgba(16, 0, 51, .01), inset 0 0 12px 0 hsla(0, 0%, 100%, .08), inset 0 -8px 32px 0 #1e0d49;
 }
 
-.btn-prueba:hover {
+.btn-shadow:hover {
     background: radial-gradient(231.94% 231.94% at 50% 100%, var(--color-three) 0, rgba(53, 41, 128, 0) 25.24%), linear-gradient(180deg, rgba(243, 238, 255, 0), rgba(243, 238, 255, .04)), rgba(147, 130, 255, .6);
     box-shadow: inset 0 0 12px 0 hsla(0, 0%, 100%, .08), inset 0 -8px 32px 0 #1e0d49, 0 0 0 0 rgba(16, 0, 51, .4), 0 2px 5px 0 rgba(16, 0, 51, .39), 0 8px 8px 0 rgba(16, 0, 51, .34), 0 19px 11px 0 rgba(16, 0, 51, .2), 0 34px 14px 0 rgba(16, 0, 51, .06), 0 53px 15px 0 rgba(16, 0, 51, .01)
 }
@@ -230,6 +230,20 @@ input[id='menu'] {
 .hero {
     height: 100%;
     min-height: max-content;
+
+    position: relative;
+
+    &::after {
+        content: "";
+        top: 30%;
+        left: 60%;
+        z-index: -1;
+        width: 800px;
+        height: 288px;
+        position: absolute;
+        transform: translateX(-50%);
+        background: url("../images/blur-bg.webp") no-repeat center / cover;
+    }
 }
 
 .hero__main {
@@ -239,26 +253,27 @@ input[id='menu'] {
     gap: 4.5rem;
     position: relative;
 
-    &::after {
-        content: "";
-        top: 30%;
-        left: 40%;
-        z-index: -1;
-        width: 800px;
-        height: 288px;
-        position: absolute;
-        transform: translateX(-50%);
-        background: url("../images/blur-bg.webp") no-repeat center / cover;
-    }
 
 }
 
 .hero__title {
-    font-size: 2.5rem;
+    font-family: Now;
+    font-size: 3rem;
+    text-transform: uppercase;
+    /* letter-spacing: 2px; */
     text-wrap: pretty;
+
+    & span {
+        color: transparent;
+        font-weight: 900;
+        letter-spacing: 1px;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: var(--color-three);
+    }
 }
 
 .hero__paragraph {
+    font-size: 1.2rem;
     line-height: 1.5;
     text-wrap: balance;
     margin: 2rem 0;
@@ -374,7 +389,8 @@ main .section-name {
     font-size: 7rem;
     color: transparent;
     -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: #aaa5a5;
+    -webkit-text-stroke-color: #fff;
+    z-index: 2;
 }
 
 /*section service*/
@@ -382,20 +398,63 @@ main .service {
     position: relative;
     /* background: linear-gradient(90deg, var(--color-dark), var(--color-three)); */
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
 }
 
 main .service .container-name h2 {
     writing-mode: vertical-lr;
     transform: rotate(180deg);
+    z-index: 1;
 }
 
 .service .container-name {
     position: absolute;
     top: 10px;
     left: 0;
+    z-index: 2;
 }
+
+#hex-grid {
+    height: 100vh;
+    background-color: transparent;
+    /* mask-image: linear-gradient(to right, transparent 0, transparent 51px,
+                    #000 77px, #000 50%, transparent 50%, transparent 100%),
+                linear-gradient(to left, transparent 0, transparent 51px,
+                    #000 77px, #000 50%, transparent 50%, transparent 100%); */
+    mask-image: radial-gradient(ellipse, var(--color-dark) 20%, rgba(239, 227, 227, 0.1) 90%);
+
+}
+
+#hex-grid .grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../images/grid.svg');
+    /* mask-image: linear-gradient(var(--color-dark) 80%, transparent); */
+
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-size: 100vw;
+}
+
+#hex-grid .light {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    /* background: radial-gradient(circle at center, var(--color-one) 0%, var(--color-four) 100%); */
+    background: url("../images/blur-bg.webp") no-repeat center / cover;
+    background-repeat: round;
+    transform: translate(-100%, -100%);
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    z-index: -1;
+    background-size: 1000px;
+}
+
 
 /*section player*/
 
@@ -463,7 +522,7 @@ footer {
         width: 30%;
     }
 
-    .hero__scroll{
+    .hero__scroll {
         display: block;
     }
 
