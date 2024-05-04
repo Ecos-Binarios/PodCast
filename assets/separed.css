@@ -7,35 +7,86 @@ section.separed{
     position: relative;
     overflow: hidden;
 }
-section.separed div{
+
+
+.slider{
     position: absolute;
+    display: flex;
     width: 110%;
     height: 60px;
     background: rgba(103, 105, 226, 0.5);
     color: black;
-    font-size: 4rem;
     backdrop-filter: blur(5px);
+    overflow: hidden;
+    cursor: pointer;
+    /* white-space: nowrap; */
 }
 
-section.separed div h6{
-    font-family: 'Roboto';
-    font-size: 4rem;
+.slider:hover .slide__track{
+    animation-play-state: paused;
 }
 
-section.separed div small{
-    font-size: 2rem;
+.slide__track{
+   display: flex;
+   white-space: nowrap;
+   animation: scroll 20s infinite linear;
+   width: 100%;
 }
 
-section.separed div:nth-child(1){
+.slider .slide{
+    text-align: center;
+    width: 200px;
+    height: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+
+.slide h6{
+    font-family: 'Roboto';
+    font-size: 3rem;
+}
+
+.slide small{
+    font-size: 1.5rem;
+}
+
+.slider:nth-child(1){
     transform: rotate(5deg);
 }
 
-section.separed div:nth-child(2){
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.slider:nth-child(2){
     transform: rotate(-10deg);
+} 
+
+
+/*
+
+.slider .slide__track:nth-child(1){
+    animation: scrolliz 5s infinite linear;
 }
+
+
+
+.slider .slide__track:nth-child(2){
+    animation: scrollde 40s linear infinite;
+}
+ */
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+/* @keyframes scrollde {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(200px * 7));
+    }
+} */
