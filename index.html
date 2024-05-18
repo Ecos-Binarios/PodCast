@@ -11,10 +11,135 @@
   <title>Ecos-PodCast</title>
   <link rel="stylesheet" href="./assets/main.css" />
   <!-- <link rel="stylesheet" href="./assets/menu.css"> -->
+  <link rel="stylesheet" href="./assets/header.css">
   <link rel="stylesheet" href="./assets/service.css">
+  <link rel="stylesheet" href="./assets/login.css">
+  <link rel="stylesheet" href="./assets/footer.css">
 </head>
 
 <body>
+
+  <dialog data-id="modal" class="modal">
+
+    <section class="login" id="login">
+      <form class="login__form">
+
+        <div class="login__header">
+          <a href="#" class="modal__close" id="modal-close">
+            <img src="./images/icon/x-mark.svg" alt="Cerrar" class="close-icon">
+          </a>
+          <figure class="login__logo">
+            <h2 class="login__logo-name">ecos</h2>
+          </figure>
+          <h2 class="login__title">Bienvenido!</h2>
+        </div>
+
+        <div class="login__input">
+          <input type="email" id="Email" name="Email" placeholder="Usuario o Email">
+          <label for="Email">Usuario o Email</label>
+        </div>
+
+        <div class="login__input">
+          <input type="password" id="password" name="password" placeholder="Contraseña">
+          <label for="password">Contraseña</label>
+        </div>
+
+        <div class="login__info-password">
+          <a href="#" class="login__remember">
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Recordar</label>
+          </a>
+          <a href="#" class="login__password-new">
+            Olvidé mi contraseña
+          </a>
+        </div>
+
+        <div class="login__buttons">
+          <input type="submit" class="btn btn-login-form" value="Iniciar Sesión"></input>
+        </div>
+
+        <div class="login__or"></div>
+
+        <div class="login__social">
+          <a href="#" class="btn btn__social">
+            <img src="./images/icon/google.svg" alt="Google" class="btn__icon-social">
+            Google
+          </a>
+          <a href="#" class="btn btn__social">
+            <img src="./images/facebook-blue.svg" alt="Google" class="btn__icon-social">
+            Facebook
+          </a>
+        </div>
+
+        <p class="login__signup">
+          ¿No tienes cuenta?
+          <a href="#" class="login__link">
+            <span>Registrate</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </p>
+
+      </form>
+    </section>
+
+    <section class="signup" id="signup">
+      <form class="signup__form">
+
+        <div class="signup__header">
+          <a href="#" class="modal__close">
+            <img src="./images/icon/x-mark.svg" alt="Cerrar" class="close-icon">
+          </a>
+          <figure class="signup__logo">
+            <h2 class="signup__logo-name">ecos</h2>
+          </figure>
+          <h2 class="signup__title">Crear una cuenta</h2>
+
+        </div>
+
+        <div class="signup__input">
+          <input type="email" id="Email" name="Email" placeholder="Usuario o Email">
+          <label for="Email">Email</label>
+        </div>
+
+        <div class="signup__input">
+          <input type="password" id="password" name="password" placeholder="Contraseña">
+          <label for="password">Contraseña</label>
+        </div>
+
+        <div class="signup__input">
+          <input type="password" id="password" name="password" placeholder="Contraseña">
+          <label for="password">Repetir Contraseña</label>
+        </div>
+
+        <div class="signup__info-password">
+          <a href="#" class="signup__remember">
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Aceptar los terminos y condiciones</label>
+          </a>
+        </div>
+
+        <div class="signup__buttons">
+          <input type="submit" class="btn btn-signup-form" value="Registrar"></input>
+        </div>
+
+        <p class="signup__login">
+          ¿Ya tienes una Cuenta?
+          <a href="#" class="signup__link">
+            <span>Iniciar Sesión</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </p>
+
+      </form>
+    </section>
+
+  </dialog>
 
   <!-- CABECERA DEL PROYECTO - NAV - HERO - PRESENTACION -->
   <header class="hero">
@@ -22,7 +147,7 @@
     <nav class="nav container">
 
       <figure class="nav__logo">
-        <!-- <img src="./images/logo-ecos-white.png" alt="Ecos-PodCast" class="nav__img"> -->
+        <!-- <img src="./images/logo-only.png" alt="Ecos-PodCast" class="nav__img"> -->
         <h2 class="nav__logo-name">ecos</h2>
       </figure>
 
@@ -34,7 +159,7 @@
           <li class="nav__list"><a href="#" class="nav__link">Contacto</a></li>
         </ul>
         <div class="nav__buttons">
-          <a href="#" class="btn btn-shadow">Iniciar Sesión</a>
+          <a href="#" class="btn btn-shadow btn-login">Iniciar Sesión</a>
         </div>
       </section>
 
@@ -60,18 +185,43 @@
         <p class="hero__paragraph">"Los científicos dicen que estamos hechos de átomos, pero a mí un pajarito me contó
           que estamos hechos de historias", dijo alguna vez Eduardo Galeano.</p>
         <div class="hero__buttons">
-          <a href="#" class="btn btn-shadow">
-            Crear una cuenta</a>
+          <a href="#" class="btn btn-shadow btn-signup">Crear una cuenta</a>
+          <a href="#" class="btn btn-play">
+            <span>Escuchar</span>
+            <img src="./images/icon/wave-3.png" alt="wave" width="100px">
+            <img src="./images/icon/play-circle.svg" alt="play">
+          </a>
         </div>
       </article>
 
-      <!-- <a class="hero__scroll">
+      <div class="hero__social">
+        <a href="#" class="link__social">
+          <svg xmlns="http://www.w3.org/2000/svg" class="hero__icon" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+          </svg>
+        </a>
+        <a href="#" class="link__social">
+          <svg xmlns="http://www.w3.org/2000/svg" class="hero__icon" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+          </svg>
+        </a>
+        <a href="#" class="link__social">
+          <svg xmlns="http://www.w3.org/2000/svg" class="hero__icon" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+          </svg>
+        </a>
+      </div>
+
+      <a class="hero__scroll">
         <svg xmlns="http://www.w3.org/2000/svg" class="logo-mouse" width="16" height="16" fill="currentColor"
           class="bi bi-mouse" viewBox="0 0 16 16">
           <path
             d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3m4 8a4 4 0 0 1-8 0V5a4 4 0 1 1 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5" />
         </svg>
-      </a> -->
+      </a>
 
     </section>
 
@@ -79,6 +229,7 @@
 
   <!-- TODO: 3 SECCIONES DEL PROYECTO - SERVICIO - REPRODUCTOR -->
   <main class="main">
+
     <section class="service" id="hex-grid">
       <div class="container">
         <div class="container-name">
@@ -88,6 +239,7 @@
       <div class="light"></div>
       <div class="grid"></div>
     </section>
+
     <section class="player">
       <div class="container-name">
         <h2 class="section-name">Player</h2>
@@ -102,9 +254,58 @@
   </main>
 
   <!-- TODO: REDES SOCIALES DEL PROYECTO - ENFATIZAR EL REGISTRO O EL LOGUEO -->
-  <footer>
-    <h2>footer</h2>
+  <footer class="footer">
+
+    <section class="footer__top container">
+      <figure class="footer__logo">
+        <h2 class="footer__logo-name">ecos</h2>
+      </figure>
+
+      <ul class="footer__nav-list">
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">Inicio</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">Servicios</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">Acerca de Nosotros</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link footer__nav-link--button">Iniciar Sesión</a>
+          <a href="#" class="footer__nav-link footer__nav-link--button">Registrarse</a>
+        </li>
+      </ul>
+
+      <div class="footer__social-media">
+        <a href="#" class="footer__social-media-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+          </svg>
+        </a>
+        <a href="#" class="footer__social-media-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+          </svg>
+        </a>
+        <a href="#" class="footer__social-media-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="footer__bottom">
+      <p>&copy; Todos los derechos reservados</p>
+    </section>
+
   </footer>
+
+
 
   <!-- TODO: SCRIPTS DE LA PAGINA  -->
   <script src="./assets/main.js"></script>
@@ -116,6 +317,49 @@
       light.style.left = `${e.clientX}px`
       light.style.top = `${e.clientY}px`
     })
+
+    const modal = document.querySelector(".modal")
+    const btnModalOpenLogin = document.querySelector(".btn-login")
+    const btnModalOpenSignup = document.querySelector(".btn-signup")
+
+    const btnModalCloseSignup = document.querySelector(".signup__header .modal__close")
+    const btnModalCloseLogin = document.querySelector(".login__header .modal__close")
+
+    const btnOpenLogin = document.querySelector(".signup__login .signup__link")
+    const btnOpenSignup = document.querySelector(".login__signup .login__link")
+
+    const signup = document.querySelector('.signup')
+    const login = document.querySelector('.login')
+
+    btnModalOpenLogin.addEventListener('click', (e) => {
+      login.style.display = "flex"
+      modal.showModal();
+    })
+
+    btnModalOpenSignup.addEventListener('click', (e) => {
+      signup.style.display = "flex"
+      modal.showModal();
+    })
+
+    btnModalCloseSignup.addEventListener('click', (e) => {
+      signup.style.display = "none"
+      modal.close();
+    })
+    btnModalCloseLogin.addEventListener('click', (e) => {
+      login.style.display = "none"
+      modal.close();
+    })
+
+    btnOpenSignup.addEventListener('click', () => {
+      login.style.display = "none"
+      signup.style.display = "flex"
+    })
+
+    btnOpenLogin.addEventListener('click', () => {
+      signup.style.display = "none"
+      login.style.display = "flex"
+    })
+
   </script>
 </body>
 
