@@ -78,6 +78,12 @@
     src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: 'catamaran';
+    src: url(../fonts/Catamaran/Catamaran-VariableFont_wght.ttf);
+}
+
+
 /*paleta de colores*/
 :root{
     --color-one: #7400b8;
@@ -225,6 +231,10 @@ main .about-us{
     left: 20px;
 }
 
+main .about-us .container-name h2{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
 /*footer*/
 footer{
     width: 100%;

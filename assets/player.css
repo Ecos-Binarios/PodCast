@@ -75,6 +75,7 @@
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 600;
+    font-family: 'Roboto';
 }
 
 .player__item_title p{
@@ -118,7 +119,21 @@
     font-size: 2rem;
     gap: 20px;
 }
-
+.player__reproduct_title{
+    font-family: 'Roboto';
+}
 .player__reproduct_containt{
     font-size: 1rem;
+}
+
+.player__reproduct_btn-user button{
+    border: none;
+    border-radius: 20px;
+
+    color: #fff;
+
+    outline: none;
+    cursor: pointer;
+    background: blue;
+    padding: 10px 20px;
 }

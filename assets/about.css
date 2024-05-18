@@ -1,0 +1,245 @@
+.about-us__content{
+    /* background: red; */
+    width: 100%;
+    height: 100%;
+    /* background: red; */
+ 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.about-us__left{
+    /* background-color: blanchedalmond; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.left__creatores-container{
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    /* border-radius: 50%; */
+    /* background-color: red; */
+}
+
+.left__creatores{
+  /* width: 100%; */
+  height: 100%;
+  /* height: 100%; */
+  /* background-color: white; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  transition: all 0.3s ease-in-out;
+}
+
+.left__creator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.left__creator-img{
+    position: relative;
+    min-width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    padding: 50px 10px;
+  
+    border: 0.5px solid white;
+    /* border-radius: 20px; */
+  
+    background: linear-gradient(rgba(255, 255, 255, 0.4) 10% , black);
+  
+    overflow: hidden;
+    backdrop-filter: blur(3px);
+    box-shadow: 10px 10px 20px rgba(1, 1, 1, 1), inset 0px 8px 80px rgba(54, 56, 206, 1);
+}
+
+.left__creator-img img{
+   width: 100px;
+}
+.left__name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+
+}
+
+.left__creator h6{
+    font-size: 1.5rem;
+    font-family: 'Roboto';
+}
+
+.left__creator small{
+    font-size: 1rem;
+    font-family: 'Roboto';
+}
+
+.about-us__right{
+   /*  background-color: chartreuse; */
+    /* font-size: 1rem; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    gap: 10px;
+    /* align-items: center; */
+    padding-left: 30px;
+    /* position: relative; */
+}
+
+.about-us__header{
+    width: 400px;
+    height: 120px;
+  /* background-color: beige; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right__title{
+    position: absolute;
+    color: transparent;
+    font-family: 'Now-font';
+    font-size: 6rem;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--color-four);
+}
+
+.right__subtitle{
+    font-family: 'Allura';
+    font-size: 3rem;
+    position: absolute;
+    /* bottom: 0;
+    right: 10px; */
+    transform: rotate(-25deg);
+}
+
+.right__story-container{
+  overflow: hidden;
+  width: 400px;
+  position: relative;
+}
+
+.right__stoty_btn{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.story__btn-prev,
+.story__btn-next{
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.story__btn-prev img,
+.story__btn-next img{
+    width: 30px;
+    filter: invert(1)   
+}
+
+.right__story{
+  width: 100%;
+  /* height: 100%; */
+  /* background-color: black; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.story__item{
+    min-width: 400px;
+    /* height: 150px; */
+    /* background: rgba( 255, 255, 255, 0.5); */
+
+    
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.story__testimonio{
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Roboto';
+}
+
+.story__creator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 1.2rem;
+    font-family: 'Roboto';
+}
+
+.story__creator img{
+    width: 50px;
+    height: 50px;
+}
+
+/* .right__description{
+    width: 400px;
+    font-size: 1.1rem;
+    font-family: 'Roboto';
+}
+ */
+.right__btn{
+    width: 400px;
+    margin-top: 20px;
+    
+    /* background: red; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.right__btn_item{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #969595;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-active{
+    /* width: 30px; */
+    background: var(--color-one);
+    box-shadow: 0px 0px 15px 8px rgba(4, 3, 80, 1);
+}
