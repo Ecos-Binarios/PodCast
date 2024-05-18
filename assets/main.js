@@ -32,9 +32,15 @@ function reloadSlider(){
   slider__izquierda.style.transform = "translateY(" + checkLesft +"%)";
 
   let dotsPrev = document.querySelector('.right__btn_item.btn-active');//CAPTURO EL ELEMENTO QUE ESTE ACTIVO
-
+  
   dotsPrev.classList.remove('btn-active');//BORRO EL ACTIVO DEL ELEMENTO CAPTURADO
   dots[active].classList.add('btn-active');//LE AGREGO EL ACTIVO AL ELEMENTO QUE NOS INDIQUE EL CONTADOR O INDEX
+  
+  let creatorPrev = document.querySelector('.left__creator.active-creator');
+  
+  console.log(creatorPrev)
+  creatorPrev.classList.remove('active-creator');
+  creatores[active].classList.add('active-creator');
 }
 
 //TODO: RECORO TODOS LOS DOTS QUE SON LOS CIRCULOS EN MI DOM Y ESCUCHO ADENTRO EL ELEMENTO CLICK 
