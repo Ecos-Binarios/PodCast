@@ -26,6 +26,9 @@ prev.onclick = function(){
   reloadSlider();
 }
 
+//TODO: automatizacion slider
+let refreshSlider = setInterval(()=>{ next.onclick()}, 5000);
+
 function reloadSlider(){
   let checkLesft = active * -100;// MULTIPLICA EL CONTADOR SEGUN SU POSICION POR LA CANTIDAD DE DISTANCIA QUE QUEIRO QUE SE MUEVA MI ELEMENTO
   slider__inner.style.transform = "translateX(" + checkLesft +"%)";//HAGO QUE EL ELEMENTO TENGA ESTA POSICION
@@ -41,6 +44,10 @@ function reloadSlider(){
   console.log(creatorPrev)
   creatorPrev.classList.remove('active-creator');
   creatores[active].classList.add('active-creator');
+  
+  //TODO: limpiamos el intervalo cuando hacemos click  y luego lo volvemos a arrancar al no hacer click
+  clearInterval(refreshSlider);
+  refreshSlider = setInterval(() => { next.onclick()}, 5000)
 }
 
 //TODO: RECORO TODOS LOS DOTS QUE SON LOS CIRCULOS EN MI DOM Y ESCUCHO ADENTRO EL ELEMENTO CLICK 
