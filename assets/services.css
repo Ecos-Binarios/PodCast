@@ -35,6 +35,8 @@
 
 .service__title {
   font-family: 'Now-font';
+  text-transform: uppercase;
+  letter-spacing: 3px;
   text-align: center;
   font-weight: 800;
   font-size: 3.5rem;
@@ -45,6 +47,7 @@
 }
 
 .onaire {
+  font-size: 2rem;
   color: #ffffff;
   font-family: "Roboto";
   border: 2px solid var(--color-one);
@@ -142,6 +145,7 @@
   & p{
     color: var(--color-six);
     font-size: 2rem;
+    text-transform: uppercase;
   }
 
   & img{

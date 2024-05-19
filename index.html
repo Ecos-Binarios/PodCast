@@ -13,6 +13,7 @@
   <!-- <link rel="stylesheet" href="./assets/menu.css"> -->
   <link rel="stylesheet" href="./assets/header.css">
   <link rel="stylesheet" href="./assets/services.css">
+  <link rel="stylesheet" href="./assets/player.css">
   <link rel="stylesheet" href="./assets/login.css">
   <link rel="stylesheet" href="./assets/footer.css">
 </head>
@@ -154,9 +155,9 @@
       <section class="nav__menu">
         <ul class="nav__links">
           <li class="nav__list"><a href="#" class="nav__link">Inicio</a></li>
-          <li class="nav__list"><a href="#" class="nav__link">Servicios</a></li>
-          <li class="nav__list"><a href="#" class="nav__link">¿Quiénes somos?</a></li>
-          <li class="nav__list"><a href="#" class="nav__link">Contacto</a></li>
+          <li class="nav__list"><a href="#services" class="nav__link">Servicios</a></li>
+          <li class="nav__list"><a href="#player" class="nav__link">Player</a></li>
+          <li class="nav__list"><a href="#about" class="nav__link">¿Quiénes somos?</a></li>
         </ul>
         <div class="nav__buttons">
           <a href="#" class="btn btn-shadow btn-login">Iniciar Sesión</a>
@@ -230,12 +231,11 @@
   <!-- TODO: 3 SECCIONES DEL PROYECTO - SERVICIO - REPRODUCTOR -->
   <main class="main">
 
-    <section class="service">
+    <section class="service" id="services">
       <div class="service__header container">
         <h2 class="service__title">Servicios</h2>
         <h6 class="onaire">EN AIRE</h6>
       </div>
-      <!-- TODO: CONTENEDOR DE LOS DOS LADOS DE LA SECCION  -->
       <div class="service__content container">
         <div class="service__slider">
           <article class="service__card">
@@ -321,11 +321,81 @@
       </div>
     </section>
 
-    <section class="player">
-      <div class="container-name">
-        <h2 class="section-name">Player</h2>
+    <section class="player" id="player">
+
+      <div class="player__header container">
+        <h2 class="player__title">Player</h2>
       </div>
+
+      <section class="player__content container">
+
+        <article class="player__texts">
+          <h3 class="player__subtitle">Podcast más escuchado de la semana</h3>
+          <p class="player__description">Aquí puedes encontrar los podcasts más escuchados por los usuarios en lo que va
+            de la semana, con
+            novedades, relatos y noticias. Esta lista cambia según los gustos de los usuarios. Puedes seguir
+            explorando más podcasts haciendo clic en el siguiente botón.</p>
+          <a href="#" class="btn player__cta">Ver más</a>
+        </article>
+
+        <div class="player__list">
+          <div class="player__list_container">
+
+            <div class="player__item">
+              <div class="player__item_conteint">
+                <div class="player__item_num">01.</div>
+                <div class="player__item_img"><img src="./images/micro-dibujo.png" alt="imagen user"></div>
+                <div class="player__item_title">
+                  <h4>Clases de tecnologías usadas</h4>
+                  <p>Todo lo que necesitas saber</p>
+                </div>
+              </div>
+              <div class="player__item_btn-play">
+                <button>
+                  <img src="./images/icon-play.svg" alt="icono play">
+                </button>
+              </div>
+            </div>
+
+            <div class="player__item">
+              <div class="player__item_conteint">
+                <div class="player__item_num">02.</div>
+                <div class="player__item_img"><img src="./images/moni-animas.webp" alt="imagen user"></div>
+                <div class="player__item_title">
+                  <h4>Clases de tecnologías usadas</h4>
+                  <p>Todo lo que necesitas saber</p>
+                </div>
+              </div>
+              <div class="player__item_btn-play">
+                <button>
+                  <img src="./images/icon-play.svg" alt="icono play">
+                </button>
+              </div>
+            </div>
+
+            <div class="player__item">
+              <div class="player__item_conteint">
+                <div class="player__item_num">03.</div>
+                <div class="player__item_img"><img src="./images/micro-logito.jpg" alt="imagen user"></div>
+                <div class="player__item_title">
+                  <h4>Clases de tecnologías usadas</h4>
+                  <p>Todo lo que necesitas saber</p>
+                </div>
+              </div>
+              <div class="player__item_btn-play">
+                <button>
+                  <img src="./images/icon-play.svg" alt="icono play">
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
     </section>
+
     <!-- TODO: PODRIAMOS REALIZARLO EN OTRA PAGINA -->
     <section class="about-us">
       <div class="container-name">
