@@ -58,7 +58,7 @@ dialog.modal {
 .modal[open] .signup {
     opacity: 1;
     visibility: visible;
-    animation: modalIn 0s;
+    animation: modalIn 1s;
 }
 
 .login__header,
