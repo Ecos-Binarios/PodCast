@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="./assets/header.css">
   <link rel="stylesheet" href="./assets/services.css">
   <link rel="stylesheet" href="./assets/player.css">
+  <link rel="stylesheet" href="./assets/about.css">
   <link rel="stylesheet" href="./assets/login.css">
   <link rel="stylesheet" href="./assets/footer.css">
 </head>
@@ -397,9 +398,106 @@
     </section>
 
     <!-- TODO: PODRIAMOS REALIZARLO EN OTRA PAGINA -->
-    <section class="about-us">
-      <div class="container-name">
-        <h2 class="section-name">About</h2>
+    <section class="about-us" id="about">
+      <div class="about__header container">
+        <h2 class="about__title">Nosotros</h2>
+      </div>
+
+      <div class="about-us__content container">
+        <div class="about-us__left">
+          <div class="left__creatores-container">
+            <div class="left__creatores">
+              <div class="left__creator active-creator">
+                <div class="left__creator-img">
+                  <img src="./images/user.png" alt="desarrollador">
+                </div>
+              </div>
+              <div class="left__creator">
+                <div class="left__creator-img">
+                  <img src="./images/user.png" alt="desarrollador">
+                </div>
+              </div>
+              <div class="left__creator">
+                <div class="left__creator-img">
+                  <img src="./images/user.png" alt="desarrollador">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-us__right">
+
+          <div class="about-us__header">
+            <h2 class="right__title">ECOS</h2>
+            <h3 class="right__subtitle">Podcast</h3>
+          </div>
+
+          <div class="right__stoty_btn">
+            <button class="story__btn-prev"><img src="./images/previus.svg" alt="icono previus"></button>
+            <button class="story__btn-next"><img src="./images/next.svg" alt="icono next"></button>
+          </div>
+
+
+          <div class="right__story-container">
+
+            <div class="right__story">
+
+              <div class="story__item">
+                <div class="story__testimonio">
+                  <p>"Ecos nace para darles a las personas un lugar donde contar sus vivencias y conectar con otros
+                    mediante historias, relatos , cuentos , comedia que quieran plasmar,
+                    lo que tratamos con esta iniciativa es poder brindar herramientas tanto a profecionales como
+                    amateurs la posibilidad de ser reconocidos por sus actividades y conocimientos
+                    de esta manera poder influenciar a otros de hacer lo mismo"</p>
+                </div>
+                <div class="story__creator">
+                  <div>
+                    <h6>Sebastian Sosa</h6>
+                    <small>Desarrollador</small>
+                  </div>
+                </div>
+              </div>
+              <div class="story__item">
+                <div class="story__testimonio">
+                  <p>"creemos que cualquier actividad realizada se potencia mas caundo se hace conocida,
+                    cuando logramos conectar con otros y hacer que nuestros trabajos sean impulsados por medio de la
+                    difusion."</p>
+                </div>
+                <div class="story__creator">
+                  <div>
+                    <h6>Rony Almiron</h6>
+                    <small>Desarrollador</small>
+                  </div>
+                </div>
+              </div>
+              <div class="story__item">
+                <div class="story__testimonio">
+                  <p>"Ecos esta formado por tres profecionales en la programacion y administracion , este proyecto fue
+                    desarrollado en el
+                    programa de CODO A CODO hecho con esfuerzo y dedicacion , ahora nuestro objetivo es que se difunda
+                    de OREJA A OREJA
+                    y hacer que otros usen este medio para contarnos y enterarnos todo lo que desconocemos"</p>
+                </div>
+                <div class="story__creator">
+                  <div>
+                    <h6>Ailen</h6>
+                    <small>Desarrollador</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="right__btn">
+            <div class="right__btn_item btn-active"></div>
+            <div class="right__btn_item"></div>
+            <div class="right__btn_item"></div>
+          </div>
+
+        </div>
       </div>
     </section>
   </main>
@@ -461,13 +559,13 @@
   <!-- TODO: SCRIPTS DE LA PAGINA  -->
   <script src="./assets/main.js"></script>
   <script>
-    const light = document.querySelector(".light")
-    const grid = document.querySelector("#hex-grid")
+    // const light = document.querySelector(".light")
+    // const grid = document.querySelector("#hex-grid")
 
-    grid.addEventListener('mousemove', function (e) {
-      light.style.left = `${e.clientX}px`
-      light.style.top = `${e.clientY}px`
-    })
+    // grid.addEventListener('mousemove', function (e) {
+    //   light.style.left = `${e.clientX}px`
+    //   light.style.top = `${e.clientY}px`
+    // })
 
     const modal = document.querySelector(".modal")
     const btnModalOpenLogin = document.querySelector(".btn-login")
