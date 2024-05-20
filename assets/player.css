@@ -1,6 +1,9 @@
 .player {
     padding: 90px 0;
-    background: linear-gradient(90deg, rgb(7, 10, 201), #080808);
+    /* background: linear-gradient(90deg, rgb(7, 10, 201), #080808); */
+    background: linear-gradient(to right, #0d1113ff 0%, #6930c3ff 50%, #0d1113ff 100%), radial-gradient(circle farthest-side at 0% 0%, #a166ffff 0%, #6685ffff 50%, #ff66deff 100%);
+    background-blend-mode: multiply;
+    backdrop-filter: blur(2em);
     position: relative;
 
     &::before {
@@ -12,7 +15,7 @@
         height: 100%;
         position: absolute;
         /* transform: translateX(-50%); */
-        background: url("../images/blur-bg.webp") no-repeat center / cover;
+        /* background: url("../images/blur-bg.webp") no-repeat center / cover; */
     }
 }
 
