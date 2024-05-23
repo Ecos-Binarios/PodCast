@@ -153,26 +153,6 @@
 /* RESPONSIVE */
 @media (width > 768px) {
 
-    .player{
-        &::after {
-            content: "";
-            top: 15%;
-            right: -10%;
-            z-index: -1;
-            width: 600px;
-            height: 90%;
-            position: absolute;
-            background-image: radial-gradient(circle farthest-side, rgba(255, 0, 182, .15), hsla(0, 0%, 100%, 0));
-        }
-
-        &::before {
-            top: 15%;
-            left: -10%;
-            width: 600px;
-            height: 90%;
-        }
-    }
-
     .player__content {
         flex-direction: row;
         justify-content: space-between;
@@ -198,4 +178,30 @@
         width: 90%;
     }
 
+}
+
+
+@media (width > 1200px) {
+
+    .player {
+        
+        &::after {
+            content: "";
+            top: 15%;
+            right: -10%;
+            z-index: -1;
+            width: 600px;
+            height: 90%;
+            position: absolute;
+            background-image: radial-gradient(circle farthest-side, rgba(255, 0, 182, .15), hsla(0, 0%, 100%, 0));
+        }
+
+        &::before {
+            top: 15%;
+            left: -10%;
+            width: 600px;
+            height: 90%;
+        }
+
+    }
 }

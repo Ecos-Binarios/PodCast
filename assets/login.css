@@ -16,13 +16,13 @@ dialog.modal {
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .login, .signup {
     display: none;
     max-width: 400px;
-    height: max-content;
+    height: 100%;
     padding: 2px;
     margin: auto;
     background: var(--color-two);
@@ -133,7 +133,7 @@ dialog.modal {
         color: #ccc9cc;
         position: absolute;
         left: 18px;
-        top: 18px;
+        top:32%;
         transition: all .3s;
     }
 

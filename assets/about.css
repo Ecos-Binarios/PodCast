@@ -213,7 +213,7 @@
     font-family: 'Roboto';
     text-align: center;
 
-    & h6 {
+    & h4 {
         color: var(--color-six);
         font-family: Now;
     }

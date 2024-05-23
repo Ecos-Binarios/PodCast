@@ -23,7 +23,6 @@
 .service__header {
   display: flex;
   flex-direction: column;
-  width: 100%;
   justify-content: center;
   align-items: center;
   z-index: 2;
@@ -71,7 +70,7 @@
   scroll-snap-type: x mandatory;
   padding: 0 0 4rem 0;
   position: relative;
-  mask-image: linear-gradient(to right, black 80%, transparent);
+  mask-image: linear-gradient(to right, black 90%, transparent);
 
 }
 
@@ -133,7 +132,7 @@
     cursor: pointer;
     padding: 0;
     opacity: 0.8;
-    transition: opacity .3s, transform .3s;
+    transition: opacity .5s, transform .5s;
 
     &:hover {
       opacity: 1;
