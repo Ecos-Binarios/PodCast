@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<!-- TODO: CAMBIO DE IDIOMA -->
+<!--CAMBIO DE IDIOMA -->
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="shortcut icon" href="./images/logo-only.png" type="image/x-icon">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./images/logo-only-1.png" type="image/x-icon">
 
-  <!-- TODO: TITULO PAGINA -->
+  <!--TÍTULO PAGINA -->
   <title>Ecos-PodCast</title>
-  <link rel="stylesheet" href="./assets/main.css" />
-  <!-- <link rel="stylesheet" href="./assets/menu.css"> -->
+  <link rel="stylesheet" href="./assets/main.css">
+  <link rel="stylesheet" href="./assets/login.css">
   <link rel="stylesheet" href="./assets/header.css">
   <link rel="stylesheet" href="./assets/services.css">
   <link rel="stylesheet" href="./assets/player.css">
   <link rel="stylesheet" href="./assets/about.css">
-  <link rel="stylesheet" href="./assets/login.css">
   <link rel="stylesheet" href="./assets/footer.css">
 </head>
 
-<body>
+<body id="top">
 
   <dialog data-id="modal" class="modal">
 
@@ -37,27 +36,27 @@
         </div>
 
         <div class="login__input">
-          <input type="email" id="Email" name="Email" placeholder="Usuario o Email">
-          <label for="Email">Usuario o Email</label>
+          <input type="email" id="login__email" name="Email" placeholder="Usuario o Email">
+          <label for="login__email">Usuario o Email</label>
         </div>
 
         <div class="login__input">
-          <input type="password" id="password" name="password" placeholder="Contraseña">
-          <label for="password">Contraseña</label>
+          <input type="password" id="login__password" placeholder="Contraseña">
+          <label for="login__password">Contraseña</label>
         </div>
 
         <div class="login__info-password">
-          <a href="#" class="login__remember">
+          <div class="login__remember">
             <input type="checkbox" name="remember" id="remember">
             <label for="remember">Recordar</label>
-          </a>
+          </div>
           <a href="#" class="login__password-new">
             Olvidé mi contraseña
           </a>
         </div>
 
         <div class="login__buttons">
-          <input type="submit" class="btn btn-login-form" value="Iniciar Sesión"></input>
+          <input type="submit" class="btn btn-login-form" value="Iniciar Sesión">
         </div>
 
         <div class="login__or"></div>
@@ -98,33 +97,40 @@
             <h2 class="signup__logo-name">ecos</h2>
           </figure>
           <h2 class="signup__title">Crear una cuenta</h2>
-
         </div>
 
         <div class="signup__input">
-          <input type="email" id="Email" name="Email" placeholder="Usuario o Email">
-          <label for="Email">Email</label>
+          <input type="email" id="signup__email" placeholder="Email">
+          <label for="signup__email">Email</label>
         </div>
 
         <div class="signup__input">
-          <input type="password" id="password" name="password" placeholder="Contraseña">
-          <label for="password">Contraseña</label>
+          <input type="text" id="signup__name" placeholder="Nombre">
+          <label for="signup__name">Nombre</label>
         </div>
 
         <div class="signup__input">
-          <input type="password" id="password" name="password" placeholder="Contraseña">
-          <label for="password">Repetir Contraseña</label>
+          <input type="text" id="signup__lastname" placeholder="Apellidos">
+          <label for="signup__lastname">Apellidos</label>
+        </div>
+
+        <div class="signup__input">
+          <input type="password" name="password" id="signup__password" placeholder="Contraseña">
+          <label for="signup__password">Contraseña</label>
+        </div>
+
+        <div class="signup__input">
+          <input type="password" id="signup__password-repeat" placeholder="Contraseña">
+          <label for="signup__password-repeat">Repetir Contraseña</label>
         </div>
 
         <div class="signup__info-password">
-          <a href="#" class="signup__remember">
-            <input type="checkbox" name="remember" id="remember">
-            <label for="remember">Aceptar los terminos y condiciones</label>
-          </a>
+          <input type="checkbox" name="terms" id="terms">
+          <label class="signup__terms" for="terms">Aceptar los términos y condiciones</label>
         </div>
 
         <div class="signup__buttons">
-          <input type="submit" class="btn btn-signup-form" value="Registrar"></input>
+          <input type="submit" class="btn btn-signup-form" value="Registrar">
         </div>
 
         <p class="signup__login">
@@ -143,27 +149,27 @@
 
   </dialog>
 
-  <!-- CABECERA DEL PROYECTO - NAV - HERO - PRESENTACION -->
+  <!-- CABECERA DEL PROYECTO - NAV - HERO - PRESENTACIÓN -->
   <header class="hero">
 
     <nav class="nav container">
 
       <figure class="nav__logo">
-        <!-- <img src="./images/logo-only.png" alt="Ecos-PodCast" class="nav__img"> -->
         <h2 class="nav__logo-name">ecos</h2>
+        <!-- <img src="./images/logo-only-1.png" alt="Ecos" width="40"> -->
       </figure>
 
-      <section class="nav__menu">
+      <div class="nav__menu">
         <ul class="nav__links">
           <li class="nav__list"><a href="#" class="nav__link">Inicio</a></li>
-          <li class="nav__list"><a href="#services" class="nav__link">Servicios</a></li>
+          <li class="nav__list"><a href="#service" class="nav__link">Servicios</a></li>
           <li class="nav__list"><a href="#player" class="nav__link">Player</a></li>
           <li class="nav__list"><a href="#about" class="nav__link">¿Quiénes somos?</a></li>
         </ul>
         <div class="nav__buttons">
           <a href="#" class="btn btn-shadow btn-login">Iniciar Sesión</a>
         </div>
-      </section>
+      </div>
 
       <label for="menu" class="nav__label">
         <input type="checkbox" id="menu">
@@ -178,19 +184,19 @@
 
       <figure class="hero__figure">
         <img src="./images/bg-3.png" alt="Hero" class="hero__img">
-        <h2 class="nav__logo-bg">ecos</h2>
+        <!-- <h2 class="nav__logo-bg">ecos</h2> -->
       </figure>
 
       <article class="hero__content">
-        <h1 class="hero__title">Todos
-          tenemos algo que <span>contar</span> </h1>
+        <h2 class="hero__title">Todos
+          tenemos algo que <span>contar</span> </h2>
         <p class="hero__paragraph">"Los científicos dicen que estamos hechos de átomos, pero a mí un pajarito me contó
           que estamos hechos de historias", dijo alguna vez Eduardo Galeano.</p>
         <div class="hero__buttons">
           <a href="#" class="btn btn-shadow btn-signup">Crear una cuenta</a>
           <a href="#" class="btn btn-play">
             <span>Escuchar</span>
-            <img src="./images/wave-3.png" alt="wave" width="100px">
+            <img src="./images/wave-3.png" alt="wave" width="100">
             <img src="./images/play-circle.svg" alt="play">
           </a>
         </div>
@@ -217,24 +223,16 @@
         </a>
       </div>
 
-      <!-- <a class="hero__scroll">
-        <svg xmlns="http://www.w3.org/2000/svg" class="logo-mouse" width="16" height="16" fill="currentColor"
-          class="bi bi-mouse" viewBox="0 0 16 16">
-          <path
-            d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3m4 8a4 4 0 0 1-8 0V5a4 4 0 1 1 8 0zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5" />
-        </svg>
-      </a> -->
-
     </section>
 
   </header>
 
-  <!-- TODO: 3 SECCIONES DEL PROYECTO - SERVICIO - REPRODUCTOR -->
+  <!-- 3 SECCIONES DEL PROYECTO - SERVICIO - REPRODUCTOR - ABOUT -->
   <main class="main">
 
-    <section class="service" id="services">
+    <section class="service" id="service">
       <div class="service__header container">
-        <h2 class="service__title">Servicios</h2>
+        <h2 class="section__title">Servicios</h2>
         <h6 class="onaire">EN AIRE</h6>
       </div>
       <div class="service__content container">
@@ -246,11 +244,6 @@
             <div class="service_item_title">
               <h3>Reproduce Sin Parar</h3>
             </div>
-            <!-- <div class="service_item_content">
-                  <p>Disfruta de una experiencia de escucha fluida con la reproducción continua. Automáticamente, reproduce episodios relacionados o sugeridos para mantenerte inmerso en el contenido sin interrupciones.</p>
-                </div> -->
-            <!-- <div class="service_item_subtitle">
-                </div> -->
             <div class="service__item__btn">
               <p>Fluida</p>
               <img src="./images/arrow-down-right.svg" class="service__seemore" title="Leer más" alt="Leer más">
@@ -263,9 +256,6 @@
             <div class="service_item_title">
               <h3>Comparte tus Relatos en Audio</h3>
             </div>
-            <!-- <div class="service_item_content">
-                  <p>Haz que tu voz se escuche. Comparte tus ideas y relatos subiendo tus propios audios. Inspira a otros y forma parte de una comunidad de narradores</p>
-                </div> -->
             <div class="service__item__btn">
               <p>Conecta</p>
               <img src="./images/arrow-down-right.svg" class="service__seemore" title="Leer más" alt="Leer más">
@@ -278,9 +268,6 @@
             <div class="service_item_title">
               <h3>Crea tus Listas</h3>
             </div>
-            <!-- <div class="service_item_content">
-                  <p>Crea listas de reproducción personalizadas con tus episodios favoritos. Organiza tu contenido por tema, género o estado de ánimo, y disfruta de una experiencia de escucha adaptada a tus preferencias</p>
-                </div> -->
             <div class="service__item__btn">
               <p>Organizado</p>
               <img src="./images/arrow-down-right.svg" class="service__seemore" title="Leer más" alt="Leer más">
@@ -293,9 +280,6 @@
             <div class="service_item_title">
               <h3>Comenta los Podcast</h3>
             </div>
-            <!-- <div class="service_item_content">
-                  <p>Participa dejando comentarios en los episodios de otros creadores. Comparte tus opiniones, haz preguntas o simplemente muestra tu aprecio por las historias y podcasts que te gustan</p>
-                </div> -->
             <div class="service__item__btn">
               <p>Interactivo</p>
               <img src="./images/arrow-down-right.svg" class="service__seemore" title="Leer más" alt="Leer más">
@@ -308,9 +292,6 @@
             <div class="service_item_title">
               <h3>Recibe las Últimas Noticias</h3>
             </div>
-            <!-- <div class="service_item_content">
-                  <p>Mantente al tanto de las últimas novedades de tus podcasts favoritos. Recibe notificaciones con las últimas noticias, anuncios de nuevos episodios y actualizaciones exclusivas directamente en tu dispositivo</p>
-                </div> -->
             <div class="service_item_subtitle">
             </div>
             <div class="service__item__btn">
@@ -325,18 +306,18 @@
     <section class="player" id="player">
 
       <div class="player__header container">
-        <h2 class="player__title">Player</h2>
+        <h2 class="section__title">Player</h2>
       </div>
 
       <section class="player__content container">
 
         <article class="player__texts">
-          <h3 class="player__subtitle">Podcast más escuchado de la semana</h3>
+          <h3 class="player__subtitle"><span>Podcast</span> más escuchado de la semana</h3>
           <p class="player__description">Aquí puedes encontrar los podcasts más escuchados por los usuarios en lo que va
             de la semana, con
             novedades, relatos y noticias. Esta lista cambia según los gustos de los usuarios. Puedes seguir
             explorando más podcasts haciendo clic en el siguiente botón.</p>
-          <a href="#" class="btn player__cta">Ver más</a>
+          <a href="#" class="btn player__cta">Ver todos</a>
         </article>
 
         <div class="player__list">
@@ -397,10 +378,9 @@
 
     </section>
 
-    <!-- TODO: PODRIAMOS REALIZARLO EN OTRA PAGINA -->
     <section class="about-us" id="about">
       <div class="about__header container">
-        <h2 class="about__title">Nosotros</h2>
+        <h2 class="section__title">¿Quiénes somos?</h2>
       </div>
 
       <div class="about-us__content container">
@@ -409,17 +389,17 @@
             <div class="left__creatores">
               <div class="left__creator active-creator">
                 <div class="left__creator-img">
-                  <img src="./images/user.png" alt="desarrollador">
+                  <img src="./images/perfil-seba.jpg" alt="desarrollador">
                 </div>
               </div>
               <div class="left__creator">
                 <div class="left__creator-img">
-                  <img src="./images/user.png" alt="desarrollador">
+                  <img src="./images/perfil-rony.jpg" alt="desarrollador">
                 </div>
               </div>
               <div class="left__creator">
                 <div class="left__creator-img">
-                  <img src="./images/user.png" alt="desarrollador">
+                  <img src="./images/perfil-ailen.jpg" alt="desarrollador">
                 </div>
               </div>
             </div>
@@ -445,11 +425,10 @@
 
               <div class="story__item">
                 <div class="story__testimonio">
-                  <p>"Ecos nace para darles a las personas un lugar donde contar sus vivencias y conectar con otros
-                    mediante historias, relatos , cuentos , comedia que quieran plasmar,
-                    lo que tratamos con esta iniciativa es poder brindar herramientas tanto a profecionales como
-                    amateurs la posibilidad de ser reconocidos por sus actividades y conocimientos
-                    de esta manera poder influenciar a otros de hacer lo mismo"</p>
+                  <p>"Ecos nace para ofrecer a las personas un espacio donde compartir sus vivencias y conectar con
+                    otros a través de historias, relatos, cuentos y comedias. Con esta iniciativa, buscamos brindar
+                    herramientas tanto a profesionales como a amateurs, dándoles la posibilidad de ser reconocidos por
+                    sus actividades y conocimientos, y así influir en otros para que hagan lo mismo."</p>
                 </div>
                 <div class="story__creator">
                   <div>
@@ -460,28 +439,29 @@
               </div>
               <div class="story__item">
                 <div class="story__testimonio">
-                  <p>"creemos que cualquier actividad realizada se potencia mas caundo se hace conocida,
-                    cuando logramos conectar con otros y hacer que nuestros trabajos sean impulsados por medio de la
-                    difusion."</p>
+                  <p>"Creemos que cualquier actividad se potencia cuando se da a conocer, ya que al conectar con otros
+                    logramos impulsar nuestro trabajo a través de la difusión. Al compartir nuestras experiencias y
+                    conocimientos, abrimos puertas a nuevas oportunidades y colaboraciones que enriquecen nuestras
+                    iniciativas. Además, la difusión crea una comunidad de apoyo que nos motiva y nos desafía a mejorar
+                    constantemente."</p>
                 </div>
                 <div class="story__creator">
                   <div>
-                    <h6>Rony Almiron</h6>
+                    <h6>Rony Almirón</h6>
                     <small>Desarrollador</small>
                   </div>
                 </div>
               </div>
               <div class="story__item">
                 <div class="story__testimonio">
-                  <p>"Ecos esta formado por tres profecionales en la programacion y administracion , este proyecto fue
-                    desarrollado en el
-                    programa de CODO A CODO hecho con esfuerzo y dedicacion , ahora nuestro objetivo es que se difunda
-                    de OREJA A OREJA
-                    y hacer que otros usen este medio para contarnos y enterarnos todo lo que desconocemos"</p>
+                  <p>"Ecos lo forman tres profesionales en la programación y administración, este proyecto se desarrolló
+                    en el programa de CODO A CODO hecho con esfuerzo y dedicación, ahora nuestro objetivo es que se
+                    difunda de OREJA A OREJA y que otros usen este medio para contarnos y enterarnos lo que
+                    desconocemos."</p>
                 </div>
                 <div class="story__creator">
                   <div>
-                    <h6>Ailen</h6>
+                    <h6>Ailen Mc Grath</h6>
                     <small>Desarrollador</small>
                   </div>
                 </div>
@@ -500,9 +480,10 @@
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- TODO: REDES SOCIALES DEL PROYECTO - ENFATIZAR EL REGISTRO O EL LOGUEO -->
+  <!-- FOOTER -->
   <footer class="footer">
 
     <section class="footer__top container">
@@ -518,11 +499,11 @@
           <a href="#" class="footer__nav-link">Servicios</a>
         </li>
         <li class="footer__nav-item">
-          <a href="#" class="footer__nav-link">Acerca de Nosotros</a>
+          <a href="#" class="footer__nav-link">¿Quiénes somos?</a>
         </li>
         <li class="footer__nav-item">
-          <a href="#" class="footer__nav-link footer__nav-link--button">Iniciar Sesión</a>
-          <a href="#" class="footer__nav-link footer__nav-link--button">Registrarse</a>
+          <a href="#" class="footer__nav-link footer__nav-link--button" id="btnLoginFooter">Iniciar Sesión</a>
+          <a href="#" class="footer__nav-link footer__nav-link--button" id="btnSignupFooter">Registrarse</a>
         </li>
       </ul>
 
@@ -548,68 +529,21 @@
       </div>
     </section>
 
-    <section class="footer__bottom">
-      <p>&copy; Todos los derechos reservados</p>
-    </section>
+    <div class="footer__bottom">
+      <p>&copy; 2024. Made by Ecos-7G</p>
+    </div>
 
   </footer>
 
+  <!-- Botón de Scroll to Top -->
+  <a href="#top" class="scroll-to-top" id="scrollToTopBtn">
+    <img src="./images/arrow-up.svg" alt="">
+  </a>
 
-
-  <!-- TODO: SCRIPTS DE LA PAGINA  -->
+  <!-- SCRIPTS DE LA PÁGINA  -->
   <script src="./assets/main.js"></script>
-  <script>
-    // const light = document.querySelector(".light")
-    // const grid = document.querySelector("#hex-grid")
+  <script src="./assets/modal.js"></script>
 
-    // grid.addEventListener('mousemove', function (e) {
-    //   light.style.left = `${e.clientX}px`
-    //   light.style.top = `${e.clientY}px`
-    // })
-
-    const modal = document.querySelector(".modal")
-    const btnModalOpenLogin = document.querySelector(".btn-login")
-    const btnModalOpenSignup = document.querySelector(".btn-signup")
-
-    const btnModalCloseSignup = document.querySelector(".signup__header .modal__close")
-    const btnModalCloseLogin = document.querySelector(".login__header .modal__close")
-
-    const btnOpenLogin = document.querySelector(".signup__login .signup__link")
-    const btnOpenSignup = document.querySelector(".login__signup .login__link")
-
-    const signup = document.querySelector('.signup')
-    const login = document.querySelector('.login')
-
-    btnModalOpenLogin.addEventListener('click', (e) => {
-      login.style.display = "flex"
-      modal.showModal();
-    })
-
-    btnModalOpenSignup.addEventListener('click', (e) => {
-      signup.style.display = "flex"
-      modal.showModal();
-    })
-
-    btnModalCloseSignup.addEventListener('click', (e) => {
-      signup.style.display = "none"
-      modal.close();
-    })
-    btnModalCloseLogin.addEventListener('click', (e) => {
-      login.style.display = "none"
-      modal.close();
-    })
-
-    btnOpenSignup.addEventListener('click', () => {
-      login.style.display = "none"
-      signup.style.display = "flex"
-    })
-
-    btnOpenLogin.addEventListener('click', () => {
-      signup.style.display = "none"
-      login.style.display = "flex"
-    })
-
-  </script>
 </body>
 
 </html>

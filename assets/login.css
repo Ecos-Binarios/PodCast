@@ -16,7 +16,6 @@ dialog.modal {
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
-
     overflow: hidden;
 }
 
@@ -36,13 +35,18 @@ dialog.modal {
 
 .login__form, .signup__form {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     background: radial-gradient(200% 125% at 8% 10%, var(--color-three), var(--color-dark), var(--color-dark));
     box-shadow: inset 0 10px 30px rgb(0 0 0 / 24%);
     padding: 1rem;
     border-radius: 15px;
+}
+
+.login__form{
+    gap: 2rem;
 }
 
 .modal[open] {
@@ -66,7 +70,7 @@ dialog.modal {
     width: 100%;
     text-align: center;
     position: relative;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
 }
 
 .modal__close{
@@ -102,7 +106,7 @@ dialog.modal {
 .signup__title {
     text-align: center;
     color: #fff;
-    letter-spacing: 2px;
+    font-weight: 400;
 }
 
 .login__input,
@@ -173,7 +177,7 @@ dialog.modal {
         color: #ccc9cc;
     }
 
-    & a.login__password-new {
+    & .login__password-new {
         font-style: italic;
         transition: text-decoration .3s;
     }
@@ -182,6 +186,10 @@ dialog.modal {
         text-decoration: underline;
     }
 
+}
+
+.signup__info-password{
+    justify-content: flex-start;
 }
 
 .btn-login-form,

@@ -58,5 +58,25 @@ dots.forEach((item, index) => {
     })
 })
 
+// SCRIPT SCROLL TO TOP
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+function handleScroll() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "flex";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+}
+
+window.onscroll = function () {
+    handleScroll();
+};
+
+scrollToTopBtn.addEventListener("click", function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
+
 
 

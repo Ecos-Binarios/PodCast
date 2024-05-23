@@ -1,23 +1,21 @@
 .service {
   padding: 80px 0 100px 0;
   position: relative;
-  
-  &::after {
+  background-color: var(--color-bg-2);
+
+  &::before {
     content: "";
     pointer-events: none;
     position: absolute;
     inset: 0;
-    /* top: 1rem; */
     height: 100%;
     width: 100%;
-    /* background-color: var(--color-six); */
-    background: linear-gradient(to right, #0d1113ff 0%, #6930c3ff 50%, #0d1113ff 100%), radial-gradient(circle farthest-side at 0% 0%, #a166ffff 0%, #6685ffff 50%, #ff66deff 100%);
-    background-blend-mode: multiply;
-    filter: blur(2em);
-    opacity: .5;
-    /* clip-path: polygon(40% 0, 60% 0, 100% 100%, 0% 100%); */
-    /* transform: perspective(1.5em) rotateX(35deg) scale(1, .6); */
-    z-index: 1;
+    background-image:
+      linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
+      linear-gradient(to bottom, #4f4f4f2e 1px, transparent 1px);
+    background-size: 60px 24px;
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+    /* z-index: 1; */
   }
 
 }
@@ -31,19 +29,6 @@
   z-index: 2;
   height: 100%;
   padding-bottom: 2rem;
-}
-
-.service__title {
-  font-family: 'Now-font';
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-align: center;
-  font-weight: 800;
-  font-size: 3.5rem;
-  margin-bottom: 2rem;
-  color: transparent;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: #fff;
 }
 
 .onaire {
@@ -74,6 +59,7 @@
 .service__content {
   margin-top: 2rem;
   height: 100%;
+  z-index: 2;
 }
 
 /*contenedor de slider*/
@@ -86,33 +72,26 @@
   padding: 0 0 4rem 0;
   position: relative;
   mask-image: linear-gradient(to right, black 80%, transparent);
+
 }
 
-/* tarjetas de servicios*/
+/* Tarjetas de servicios*/
 .service__card {
   scroll-snap-align: center;
   padding: 2rem;
   height: max-content;
   min-width: 320px;
   min-height: 350px;
-
   display: flex;
   flex-direction: column;
   justify-content: start;
   gap: 1rem;
   position: relative;
-  
-  border: 1px solid white;
   border-radius: 20px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) -0.62%, rgba(0, 0, 0, 0) 49.48%),
-    linear-gradient(270deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%),
-    linear-gradient(rgb(6, 7, 10) 3.49%, rgba(0, 0, 0, 0) 24.77%),
-    linear-gradient(rgba(0, 0, 0, 0) 36.64%, rgb(0, 0, 0) 85.35%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
   overflow: hidden;
-  backdrop-filter: blur(3px);
-  box-shadow: 10px 10px 20px rgba(1, 1, 1, 1), inset 0px 8px 80px rgba(54, 56, 206, 1);
-
+  backdrop-filter: blur(10px);
+  background-color: rgba(75, 4, 101, 0.2);
+  box-shadow: inset 1px 1px 2px 0 #ffffff44, inset -1px -1px 2px 0px #00000088;
 }
 
 .service__item__fondo {
@@ -132,6 +111,7 @@
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 600;
+  opacity: .5;
 }
 
 .service__item__btn {
@@ -142,20 +122,20 @@
   left: 2rem;
   bottom: 2rem;
 
-  & p{
+  & p {
     color: var(--color-six);
     font-size: 2rem;
     text-transform: uppercase;
   }
 
-  & img{
+  & img {
     width: 50px;
     cursor: pointer;
     padding: 0;
     opacity: 0.8;
     transition: opacity .3s, transform .3s;
 
-    &:hover{
+    &:hover {
       opacity: 1;
       transform: scale(1.1);
     }
@@ -205,69 +185,9 @@
   }
 }
 
-@keyframes luz {
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    filter: drop-shadow(5px 5px 5px rgba(112, 73, 218, 0.5));
-  }
-
-  20%,
-  24%,
-  55% {
-    filter: none;
-  }
-}
-
-@keyframes sombra {
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-    box-shadow: 10px 10px 20px rgba(1, 1, 1, 1), inset 0px 8px 80px rgba(54, 56, 206, 1);
-    border: 1px solid white;
-
-
-  }
-
-  20%,
-  24%,
-  55% {
-    box-shadow: none;
-    border: none;
-  }
-}
-
-@keyframes morph {
-
-  0%,
-  100% {
-    border-radius: 42% 56% 72% 28% / 42% 42% 56% 48%;
-  }
-
-  33% {
-    border-radius: 72% 28% 48% 48% / 28% 28% 72% 72%;
-  }
-
-  66% {
-    border-radius: 100% 56% 56% 100% / 100% 100% 56% 56%;
-  }
-}
-
 /* RESPONSIVE */
 @media (width > 768px) {
-  
+
   .service__header {
     flex-direction: row;
     justify-content: space-between;
@@ -282,6 +202,20 @@
 
   .service__card {
     min-width: 380px;
+  }
+
+  .service__slider {
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 22px;
+      height: 12px;
+    }
+
   }
 
 }
