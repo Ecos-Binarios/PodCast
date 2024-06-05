@@ -137,3 +137,45 @@
     background: blue;
     padding: 10px 20px;
 }
+
+@media (max-width: 768px) { 
+    .player__conteint{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 50px;
+     }
+
+     .player__reproduct{
+        width: 100vw;
+        /* height: 100vh; */
+     }
+
+     .player__reproduct_container{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 2rem;
+
+        gap: 20px;
+       
+        word-wrap: break-word;
+    }
+
+   /*  .player__reproduct_title{
+
+    } */
+
+    .player__reproduct_containt{
+        font-size: 1.3rem;
+    }
+
+     .player__list_container{ 
+        border-left: 0px solid rgba(79, 47, 192, 0.5);
+        border-top: 1px solid rgba(79, 47, 192, 0.5);
+        padding: 0px;
+    }
+    
+}

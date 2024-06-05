@@ -107,43 +107,21 @@
     scrollbar-width: none;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
 body{
     background: #080808;
 }
 
 
-header{
-    width: 100%;
-    height: 100vh;
-    color: #fff;
-    font-size: 3rem;
-
-    display: grid;
-    grid-template-columns: 80px 10px repeat(2, 1fr);
 
 
-    position: relative;
-    overflow: hidden;
-}
 
-.name-page{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-
-   font-family: 'Now-font';
-   font-size: 6rem;
-   font-weight: 900;
-   writing-mode: vertical-rl;
-   transform: rotate(180deg); 
-
-
-    color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #aaa5a5;
-    z-index: -1;
-}
 
 /*Nombre del proyecto*/
 
@@ -168,6 +146,7 @@ section{
 
 section .container-name h2{
     text-transform: uppercase;
+    font-size: 80px;
 }
 
 main .section-name{
@@ -238,7 +217,6 @@ main .about-us .container-name h2{
 /*footer*/
 footer{
     width: 100%;
-    height: 200px;
     color: #fff;
     text-transform: uppercase;
     font-size: 3rem;
@@ -261,5 +239,65 @@ footer{
     
         position: relative;
     }
+
+    main .service{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    section .container-name h2{
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .service .container-name{
+        position: static;
+    }
+
+    main .service .container-name h2{
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+    }
+
+    /*PLAYER*/
+    main .player{
+        margin-top: 50px;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    main .player .container-name h2{
+        writing-mode: horizontal-tb;
+    }
+    
+    .player .container-name{
+        position: static;
+    }
+
+    /*about*/
+    
+main .about-us{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us .container-name{
+    position: static;
+}
+
+main .about-us .container-name h2{
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+}
 
 }

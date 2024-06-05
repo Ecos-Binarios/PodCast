@@ -58,3 +58,10 @@ dots.forEach((item, index) => {
   })
 })
 
+
+const menu = document.querySelector('.container-nav');
+const btnMenu = document.querySelector('.btn-menu');
+
+btnMenu.addEventListener('click', () => {
+  menu.classList.toggle('nav-activo')
+})

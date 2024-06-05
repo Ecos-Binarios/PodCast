@@ -257,3 +257,101 @@
         opacity: 1;
     }
 } */
+
+@media (max-width: 768px) {
+    .about-us__content{
+        /* background: red; */
+        width: 100%;
+        height: 100vh;
+        /* background: red; */
+     
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .about-us__left{
+        /* background-color: blanchedalmond; */
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+    .left__creatores-container{
+        overflow-y: hidden;
+        width: 250px;
+        height: 250px;
+    }
+
+    .left__creator-img{
+        min-width: 250px;
+        height: 250px;
+ 
+    }
+
+/*     .left__creatores-container{
+        overflow: hidden;
+        width: 300px;
+        height: 300px;
+        position: relative;
+    } */
+
+    .about-us__right{
+        /*  background-color: chartreuse; */
+         /* font-size: 1rem; */
+         display: flex;
+         flex-direction: column;
+         width: 100vw;
+         height: 100%;
+         justify-content: center;
+         align-items: center;
+         gap: 0px;
+         /* align-items: center; */
+         padding: 0px;
+         /* position: relative; */
+     }
+
+     .about-us__header{
+       display: none;
+    }
+    /* header right*/
+
+     
+     .right__story-container{
+        overflow: hidden;
+        text-align: center;
+        width: 310px;
+        position: relative;
+        /* background-color: red; */
+     }
+
+     .right__stoty_btn{
+        display: none;
+     }
+
+     .right__story{
+
+     }
+
+     .story__item{
+        min-width: 310px;
+        /* height: 150px; */
+        /* background: rgba( 255, 255, 255, 0.5); */
+    
+        
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+     }
+
+     .story__testimonio{
+        text-align: center;
+        font-size: 1rem;
+        font-family: 'Roboto';
+    }
+    
+}
