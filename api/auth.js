@@ -1,6 +1,6 @@
 const isAuthenticated = () => {
-    const perfil = sessionStorage.getItem('user');
-    return perfil.token !== null; // Comprueba si el token está presente
+    const perfil = JSON.parse(sessionStorage.getItem('user'));
+    return perfil.token !== null || perfil.token !== undefined; // Comprueba si el token está presente
   };
   
   const protectRoute = () => {

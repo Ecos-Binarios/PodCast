@@ -241,6 +241,9 @@
     <script>
         const perfil = JSON.parse(sessionStorage.getItem("user"));
         const nombre = document.getElementById('bienvenido__nombre');
+        if(perfil.name === null){
+            window.location.href = "/"
+        }
         nombre.innerText = `Bienvenido ${perfil.name}`;
     </script>
 
