@@ -3,11 +3,21 @@
     padding: 40px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header-podcast h3 {
     color: var(--color-two);
     margin-right: 4rem;
+}
+
+.btn__logout{
+  padding: 10px 12px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
 }
 
 .podcast-item {

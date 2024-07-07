@@ -185,6 +185,9 @@
                     <div class="header-podcast">
                         <h2 class="section-title">Podcasts</h2>
                         <h3 class="section-subtitle" id="bienvenido__nombre">Bienvenido </h3>
+                        <div class="btns">
+                            <button class="btn__logout">salir</button>
+                        </div>
                     </div>
                     
                     <div class="podcast-list" id="podcast-list">
@@ -235,16 +238,26 @@
         <audio id="audio-player"></audio>
     </div>
     
-    <script src="../../api/auth.js"></script>
+    
     <script src="./app.js"></script>
 
     <script>
-        const perfil = JSON.parse(sessionStorage.getItem("user"));
-        const nombre = document.getElementById('bienvenido__nombre');
-        if(perfil.name === null){
-            window.location.href = "/"
-        }
-        nombre.innerText = `Bienvenido ${perfil.name}`;
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnLogout = document.querySelector('.btn__logout');
+            const nombre = document.getElementById('bienvenido__nombre');
+
+
+            const perfil = JSON.parse(sessionStorage.getItem("user"))
+            if(!perfil){
+                window.location.href = "/"
+            }
+            nombre.innerText = `Bienvenido ${perfil.name}`;
+
+            btnLogout.addEventListener('click', (e) => {
+                sessionStorage.removeItem("user");
+                window.location.href = "/"
+            })
+        })
     </script>
 
 </body>
