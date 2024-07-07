@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     const modalTitle = document.getElementById('modal-title');
     let currentPodcastId;
 
-
+     const perfil = JSON.parse(sessionStorage.getItem("user"));
+     const userId = perfil.id;
 
     // Open modal for episode or podcast
     function openModal(isPodcast = false, podcastId) {
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // console.log(currentPodcastId);
 
-        fetch('http://localhost:3000/api/episodes', {
+        fetch('https://ecos-podcast.onrender.com/api/episodes', {
             method: 'POST',
             body: formData
         })
@@ -109,7 +110,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         formDataPodcast.append('title', titlePodcast);
         formDataPodcast.append('description', descriptionPodcast);
         formDataPodcast.append('img', imgPodcast);
-        formDataPodcast.append('userId', 10);
+        formDataPodcast.append('userId', userId);
 
         // let lastPodcastId;
         const formDataCategory = new FormData();
@@ -121,7 +122,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         async function insertPodcast(data) {
             try {
-                const response = await fetch('http://localhost:3000/api/podcasts', {
+                const response = await fetch('https://ecos-podcast.onrender.com/api/podcasts', {
                     method: 'POST',
                     body: data
                 });
@@ -141,7 +142,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         async function insertCategories(podcastId, categoryId) {
             console.log('Data para insertar categorías:', categoryId);
-            const response = await fetch(`http://localhost:3000/api/categories/${podcastId}`, {
+            const response = await fetch(`https://ecos-podcast.onrender.com/api/categories/${podcastId}`, {
                 method: 'POST',
                 body: categoryId
             });
@@ -159,7 +160,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     async function getAllCategories() {
         try {
-            const response = await fetch('http://localhost:3000/api/categories');
+            const response = await fetch('https://ecos-podcast.onrender.com/api/categories');
             const categories = await response.json();
             const selectCategory = document.getElementById('select-category');
             const selectCategoryEdit = document.getElementById('select-category-edit');
@@ -183,7 +184,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
         // Obtener podcasts
-        const response = await fetch('http://localhost:3000/api/podcasts/user/search?userId=10');
+        const response = await fetch(`https://ecos-podcast.onrender.com/api/podcasts/user/search?userId=${userId}`);
         const podcasts = await response.json();
 
         for (const podcast of podcasts) {
@@ -230,7 +231,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             podcastContent.appendChild(categoryP);
 
             // obteniendo categoría
-            const categoriesResponse = await fetch(`http://localhost:3000/api/categories/${podcast.id}`);
+            const categoriesResponse = await fetch(`https://ecos-podcast.onrender.com/api/categories/${podcast.id}`);
             const categories = await categoriesResponse.json();
 
             // Mostrar categorías
@@ -252,7 +253,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             episodeList.classList.add('episodes');
 
             // Obtener episodios
-            const episodesResponse = await fetch(`http://localhost:3000/api/podcasts/${podcast.id}/episodes`);
+            const episodesResponse = await fetch(`https://ecos-podcast.onrender.com/api/podcasts/${podcast.id}/episodes`);
             const episodes = await episodesResponse.json();
 
             if (Array.isArray(episodes)) {
@@ -316,7 +317,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     window.deletePodcast = function (id) {
-        fetch(`http://localhost:3000/api/podcasts/${id}`, {
+        fetch(`https://ecos-podcast.onrender.com/api/podcasts/${id}`, {
             method: 'DELETE'
         })
             .then(response => response.json())
@@ -328,7 +329,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
 
     window.deleteEpisode = function (id) {
-        fetch(`http://localhost:3000/api/episodes/${id}`, {
+        fetch(`https://ecos-podcast.onrender.com/api/episodes/${id}`, {
             method: 'DELETE'
         })
             .then(response => response.json())
@@ -378,7 +379,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     };
 
     window.editPodcast = function (id, formData) {
-        fetch(`http://localhost:3000/api/podcasts/${id}`, {
+        fetch(`https://ecos-podcast.onrender.com/api/podcasts/${id}`, {
             method: 'PATCH',
             body: formData
         })

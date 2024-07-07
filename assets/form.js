@@ -72,6 +72,6 @@ loginForm.addEventListener("submit", async (e) => {
   if (response.message === "ok" && response.data !== undefined) {
     sessionStorage.setItem("user", JSON.stringify(response.data));
     /* setCookie('token', data.user.token, 7) */
-    window.location.href = "/pages/perfil/perfil.html";
+    window.location.href = "/pages/dashboard/dashboard.html";
   }
 });
