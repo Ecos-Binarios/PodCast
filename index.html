@@ -23,7 +23,7 @@
   <dialog data-id="modal" class="modal">
 
     <section class="login" id="login">
-      <form class="login__form">
+      <form class="login__form" id="login__form">
 
         <div class="login__header">
           <a href="#" class="modal__close" id="modal-close">
@@ -36,12 +36,12 @@
         </div>
 
         <div class="login__input">
-          <input type="email" id="login__email" name="Email" placeholder="Usuario o Email">
+          <input type="email" id="login__email" name="email" placeholder="Usuario o Email">
           <label for="login__email">Usuario o Email</label>
         </div>
 
         <div class="login__input">
-          <input type="password" id="login__password" placeholder="Contraseña">
+          <input type="password" name="password" id="login__password" placeholder="Contraseña">
           <label for="login__password">Contraseña</label>
         </div>
 
@@ -87,7 +87,7 @@
     </section>
 
     <section class="signup" id="signup">
-      <form class="signup__form">
+      <form class="signup__form" id="signup__form">
 
         <div class="signup__header">
           <a href="#" class="modal__close">
@@ -100,17 +100,17 @@
         </div>
 
         <div class="signup__input">
-          <input type="email" id="signup__email" placeholder="Email">
+          <input type="email" id="signup__email" name="email" placeholder="Email">
           <label for="signup__email">Email</label>
         </div>
 
         <div class="signup__input">
-          <input type="text" id="signup__name" placeholder="Nombre">
+          <input type="text" id="signup__name" name="name" placeholder="Nombre">
           <label for="signup__name">Nombre</label>
         </div>
 
         <div class="signup__input">
-          <input type="text" id="signup__lastname" placeholder="Apellidos">
+          <input type="text" id="signup__lastname" name="lastname" placeholder="Apellidos">
           <label for="signup__lastname">Apellidos</label>
         </div>
 
@@ -120,7 +120,7 @@
         </div>
 
         <div class="signup__input">
-          <input type="password" id="signup__password-repeat" placeholder="Contraseña">
+          <input type="password" id="signup__password-repeat" name="passwordrepeat" placeholder="Contraseña">
           <label for="signup__password-repeat">Repetir Contraseña</label>
         </div>
 
@@ -543,6 +543,8 @@
   <!-- SCRIPTS DE LA PÁGINA  -->
   <script src="./assets/main.js"></script>
   <script src="./assets/modal.js"></script>
+  <script type="module" src="./api/auth.api.js"></script>
+  <script type="module" src="./assets/form.js"></script>
 
 </body>
 

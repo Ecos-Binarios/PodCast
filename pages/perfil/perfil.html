@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil-Ecos</title>
+  </head>
+  <body>
+    <h1 id="perfil__user">PERFIL</h1>
+    <button id="pedir">pedir</button>
+
+    <script>
+      const perfil = JSON.parse(sessionStorage.getItem("user"));
+      if (perfil) {
+        const user = document.getElementById("perfil__user");
+        user.innerText = `Bienvenido ${perfil.name}`;
+      }
+
+      
+      const btn = document.getElementById('pedir');
+
+      const getAllUsers = async () => {
+          const respuesta = await fetch("http://localhost:3002/api/users/", {
+              method: "GET",
+              headers: {
+                  "content-Type": "application/json; charset=utf-8",
+                  "Authorization": `Bearer ${perfil.token}`
+                },
+                credentials: "include"
+            });
+            const data = await respuesta.json();
+            console.log(data)
+        };
+    btn.addEventListener('click', getAllUsers)
+    </script>
+  </body>
+</html>

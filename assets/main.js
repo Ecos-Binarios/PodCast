@@ -1,11 +1,11 @@
 //TODO: guardo los elementos de la derecha en variables
 const slider__inner = document.querySelector(".right__story");
-console.log(slider__inner)
+/* console.log(slider__inner) */
 const items = document.querySelectorAll(".story__item");
 //TODO: guardo los elementos de la izquierda en variables
 const slider__izquierda = document.querySelector(".left__creatores")
 const creatores = document.querySelectorAll(".left__creator");
-console.log(slider__izquierda)
+/* console.log(slider__izquierda) */
 
 const dots = document.querySelectorAll(".right__btn_item");
 const next = document.querySelector('.story__btn-next');
@@ -41,7 +41,7 @@ function reloadSlider() {
 
     let creatorPrev = document.querySelector('.left__creator.active-creator');
 
-    console.log(creatorPrev)
+    /* console.log(creatorPrev) */
     creatorPrev.classList.remove('active-creator');
     creatores[active].classList.add('active-creator');
 
