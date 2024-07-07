@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function fetchAllPodcasts() {
         try {
-            const response = await fetch("http://localhost:3002/api/podcasts/");
+            const response = await fetch("https://ecos-podcast.onrender.com/api/podcasts/");
             const podcasts = await response.json();
             console.log("Podcasts loaded:", podcasts);
             renderPodcasts(podcasts);
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function fetchAllEpisodes() {
         try {
-            const response = await fetch("http://localhost:3002/api/episodes/");
+            const response = await fetch("https://ecos-podcast.onrender.com/api/episodes/");
             tracks = await response.json();
             renderEpisodes(tracks);
             loadTrack(currentTrackIndex);
