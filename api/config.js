@@ -1,4 +1,4 @@
-const API_BASE_URL = 'https://ecos-podcast.onrender.com/';
+const API_BASE_URL = 'https://ecos-podcast.onrender.com';
 
 const perfil = JSON.parse(sessionStorage.getItem("user"));
 
