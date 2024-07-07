@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecos - Podcast</title>
+    <link rel="shortcut icon" href="../../images/logo-only-1.png" type="image/x-icon">
+    <style>
+        :root {
+            color-scheme: dark;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form-container h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+        }
+
+        .form-container form label {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-container form input,
+        .form-container form textarea {
+            width: 300px;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-container form button {
+            padding: 0.5rem 1rem;
+            font-size: 1.2rem;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-container form button:hover {
+            background-color: #0062cc;
+        }
+
+        .form-container form button:active {
+            background-color: #005cbf;
+        }
+
+        .form-container form button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="header">
+            <header class="nav">
+                <div class="nav__logo">
+                    <h2 class="logo-name">ecos</h2>
+                </div>
+                <ul>
+                    <li><a href="./dashboard.html" class="active-page"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i>Buscar</a></li>
+                    <li><a href="../podcasts/podcasts.html"><i class="fa-solid fa-podcast"></i>Mis Podcasts</a></li>
+                    <li><a href="../profile/profile.html"><i class="fa-solid fa-user"></i>Perfil</a></li>
+                </ul>
+            </header>
+        </section>
+        <section class="playlist">
+            <div class="playlist-header">
+                <i class="fa-regular fa-folder"></i>
+                <h2 class="section-name">Playlist</h2>
+            </div>
+
+            <div class="playlists-episodes">
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="main-content">
+                <section class="podcasts">
+
+                    <div class="header-podcast">
+                        <h2 class="section-title">Podcasts</h2>
+                        <h3 class="section-subtitle">Bienvenido Rony</h3>
+                    </div>
+                    
+                    <div class="podcast-list" id="podcast-list">
+                        <!-- Podcasts will be loaded here -->
+                    </div>
+                </section>
+                <section class="episodes">
+                    <div class="header-episode">
+                        <h2 class="section-title">Episodios</h2>
+                    </div>
+                    <div class="episode-list" id="episode-list">
+                        <!-- Episodes will be loaded here -->
+                    </div>
+                </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__player">
+                <div class="footer__episode-info">
+                    <img src="" alt="Podcast Cover" class="footer__cover" id="episode-cover">
+                    <div class="footer__text">
+                        <span class="footer__podcast-title" id="episode-title">Episode Title</span>
+                        <span class="footer__podcast-host" id="podcast-host">Host Name</span>
+                    </div>
+                </div>
+                <div class="footer__controls">
+                    <button class="footer__button footer__button--prev" onclick="prevTrack()"><i
+                            class="fas fa-backward"></i></button>
+                    <button class="footer__button footer__button--play" onclick="togglePlay()"><i class="fas fa-play"
+                            id="play-icon"></i></button>
+                    <button class="footer__button footer__button--next" onclick="nextTrack()"><i
+                            class="fas fa-forward"></i></button>
+                </div>
+                <div class="footer__progress">
+                    <span class="footer__time footer__time--current" id="current-time">0:00</span>
+                    <div class="footer__bar">
+                        <div class="footer__bar--progress" id="progress-bar"></div>
+                    </div>
+                    <span class="footer__time footer__time--duration" id="duration">0:00</span>
+                </div>
+                <div class="footer__volume">
+                    <button class="footer__button footer__button--volume"><i class="fas fa-volume-up"></i></button>
+                    <input type="range" class="footer__slider" min="0" max="100" value="50" id="volume-slider"
+                        onchange="setVolume(this.value)">
+                </div>
+            </div>
+        </footer>
+        <audio id="audio-player"></audio>
+    </div>
+
+    <script src="./app.js"></script>
+
+    <script>
+       
+
+    </script>
+
+</body>
+
+</html>

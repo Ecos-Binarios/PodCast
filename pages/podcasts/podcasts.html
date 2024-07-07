@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecos - Mis Podcasts</title>
+    <link rel="shortcut icon" href="../../images/logo-only-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="header">
+            <header class="nav">
+                <div class="nav__logo">
+                    <h2 class="logo-name">ecos</h2>
+                </div>
+                <ul>
+                    <li><a href="../dashboard/dashboard.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i>Buscar</a></li>
+                    <li><a href="./podcasts.html" class="active-page"><i class="fa-solid fa-podcast"></i>Mis
+                            Podcasts</a></li>
+                    <li><a href="../profile/profile.html"><i class="fa-solid fa-user"></i>Perfil</a></li>
+                </ul>
+            </header>
+        </section>
+        <section class="playlist">
+            <div class="playlist-header">
+                <i class="fa-regular fa-folder"></i>
+                <h2 class="section-name">Playlist</h2>
+            </div>
+
+            <div class="playlists-episodes">
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <picture class="playlist-img">
+                        <img src="../../images/moni-animas.webp" alt="Playlist 1">
+                    </picture>
+
+                    <div class="playlist-info">
+                        <h3 class="playlist-title">Playlist 1</h3>
+                        <p class="playlist-host">10 episodios</p>
+                    </div>
+
+                    <div class="playlist-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <main class="main-content">
+            <div class="header__podcast">
+                <h2 class="section-title">Mis Podcasts</h2>
+                <div class="btns">
+                    <button class="add-podcast">
+                        <i class="fas fa-plus"></i>
+                        Añadir Podcast</button>
+                </div>
+
+            </div>
+            <section class="podcast-container" id="podcast-container">
+
+            </section>
+        </main>
+
+        <!-- Modal for uploading -->
+        <div id="uploadModal" class="modal">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h2 id="modal-title">Subir Episodio</h2>
+                    <span class="close-button" id="closeModal">&times;</span>
+                </div>
+
+                <!-- Form for uploading episode -->
+                <form id="episodeForm" class="form-episode">
+
+                    <div class="form-input">
+                        <label for="title">Título del Episodio:</label>
+                        <input type="text" id="title" name="title" placeholder="Ej. Episodio 1" required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="description">Descripción:</label>
+                        <textarea id="description" name="description" placeholder="Ej. Descripción del episodio 1"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="img">Imagen del Episodio:</label>
+                        <input type="file" id="img" name="img" accept="image/*" required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="audio">Archivo de Audio:</label>
+                        <input type="file" id="audio" name="audio" accept="audio/*" required>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-publish">Publicar Episodio</button>
+                        <div class="form-spinner"></div>
+                    </div>
+
+                </form>
+
+                <!--  Form for uploading podcast -->
+                <form id="podcastForm" class="form-podcast" style="display: none;">
+
+                    <div class="form-input">
+                        <label for="title-podcast">Título del Podcast:</label>
+                        <input type="text" id="title-podcast" name="title-podcast" placeholder="Ej. Podcast 1" required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="description-podcast">Descripción:</label>
+                        <textarea id="description-podcast" name="description-podcast"
+                            placeholder="Ej. Descripción del podcast 1" required></textarea>
+                    </div>
+
+                    <div class="form-input select-custom-wrapper">
+                        <label for="category">Categorías:</label>
+                        <select name="category" class="select-category" id="select-category">
+                            <option value="" selected disabled>Seleccionar una categoría</option>
+                        </select>
+                    </div>
+
+                    <div class="form-input form-img-podcast">
+                        <label for="img-podcast">Imagen del Podcast:</label>
+                        <input type="file" id="img-podcast" name="img-podcast" accept="image/*" required>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-publish">Publicar Podcast</button>
+                        <div class="form-spinner"></div>
+                    </div>
+
+                </form>
+
+                <!-- Form for editing podcast -->
+                <form id="editPodcastForm" class="form-podcast" style="display: none;">
+
+                    <div class="form-input">
+                        <label for="title-podcast">Título del Podcast:</label>
+                        <input type="text" id="title-podcast-edit" name="title-podcast" placeholder="Ej. Podcast 1"
+                            required>
+                    </div>
+
+                    <div class="form-input">
+                        <label for="description-podcast">Descripción:</label>
+                        <textarea id="description-podcast-edit" name="description-podcast"
+                            placeholder="Ej. Descripción del podcast 1" required></textarea>
+                    </div>
+
+                    <div class="form-input select-custom-wrapper">
+                        <label for="category">Categorías:</label>
+                        <select name="category" class="select-category" id="select-category-edit">
+                            <option value="" selected disabled>Seleccionar una categoría</option>
+                        </select>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-publish">Editar Podcast</button>
+                        <div class="form-spinner"></div>
+                    </div>
+
+                </form>
+
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer__player">
+                <div class="footer__episode-info">
+                    <img src="../../images/moni-animas.webp" alt="Podcast Cover" class="footer__cover" id="episode-cover">
+                    <div class="footer__text">
+                        <span class="footer__podcast-title" id="episode-title">Episode Title</span>
+                        <span class="footer__podcast-host" id="podcast-host">Host Name</span>
+                    </div>
+                </div>
+                <div class="footer__controls">
+                    <button class="footer__button footer__button--prev" onclick="prevTrack()"><i
+                            class="fas fa-backward"></i></button>
+                    <button class="footer__button footer__button--play" onclick="togglePlay()"><i class="fas fa-play"
+                            id="play-icon"></i></button>
+                    <button class="footer__button footer__button--next" onclick="nextTrack()"><i
+                            class="fas fa-forward"></i></button>
+                </div>
+                <div class="footer__progress">
+                    <span class="footer__time footer__time--current" id="current-time">0:00</span>
+                    <div class="footer__bar">
+                        <div class="footer__bar--progress" id="progress-bar"></div>
+                    </div>
+                    <span class="footer__time footer__time--duration" id="duration">0:00</span>
+                </div>
+                <div class="footer__volume">
+                    <button class="footer__button footer__button--volume"><i class="fas fa-volume-up"></i></button>
+                    <input type="range" class="footer__slider" min="0" max="100" value="50" id="volume-slider"
+                        onchange="setVolume(this.value)">
+                </div>
+            </div>
+        </footer>
+        <audio id="audio-player"></audio>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
