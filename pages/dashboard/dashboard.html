@@ -184,7 +184,7 @@
 
                     <div class="header-podcast">
                         <h2 class="section-title">Podcasts</h2>
-                        <h3 class="section-subtitle">Bienvenido Rony</h3>
+                        <h3 class="section-subtitle" id="bienvenido__nombre">Bienvenido </h3>
                     </div>
                     
                     <div class="podcast-list" id="podcast-list">
@@ -238,8 +238,9 @@
     <script src="./app.js"></script>
 
     <script>
-       
-
+        const perfil = JSON.parse(sessionStorage.getItem("user"));
+        const nombre = document.getElementById('bienvenido__nombre');
+        nombre.innerText = `Bienvenido ${perfil.name}`;
     </script>
 
 </body>
